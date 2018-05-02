@@ -3,12 +3,16 @@
 <head>
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Justin's Portfolio</title>
 </head>
 <body>
+
   <div class="container">
+
     <header class="header">
       <div class="header_inside"></div>
+
         <picture>
           <source
             media="(max-width: 480px)"
@@ -18,13 +22,26 @@
           />
           <img src="images/logo.png" alt="portfolio logo">
         </picture>
+
         <h1 class="header_title">Justin Schlump</h1>
         <h2 class="header_title_sub">Full Stack Developer</h2>
-</header>
+
+    </header>
+
+    <section class="main-image">
+          <picture>
+          <source media="(max-width: 960px)"
+              srcset="images/main_image_480px.jpg">
+          <source media="(max-width: 1960px)"
+              srcset="images/main_image_960px.jpg">
+          <img src="images/main_image_1080px.jpg" alt="portfolio main image">
+        </picture>
+    </section>
 
     <footer>
       <div class="footer">2018 Justin's Portfolio</div>
     </footer>
+
   </div>
 </body>
 </html>
