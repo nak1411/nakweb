@@ -1,5 +1,4 @@
-
-
+/***GENERAL***/
 html {
     box-sizing: border-box;
     font-family: Lucida Console, sans serif;
@@ -25,9 +24,7 @@ body {
     }
 }
 
-
 /***TOP SECTION***/
-
 .header-inside {
     display: grid;
     grid-template-columns: 2;
@@ -39,7 +36,6 @@ body {
     border-width: 3px;
     border-radius: 10px;
     box-shadow: 0 0 3px black;
-
 }
 
 .header-inside img {
@@ -47,7 +43,6 @@ body {
     grid-column: 1;
     grid-row: 1;
     min-height: 120px;
-
 }
 
 .header-inside h1 {
@@ -81,7 +76,6 @@ body {
 }
 
 /***MID SECTION***/
-
 .mid-section {
     display: grid;
     border: solid;
@@ -89,19 +83,15 @@ body {
     border-width: 3px;
     border-radius: 10px;
     box-shadow: 0 0 3px black;
-
 }
 .mid-section img {
     max-width: 100%;
     height: auto;
     border-radius: 10px;
-
 }
 
-
-
 /***BOTTOM SECTION***/
-.bottom-section{
+.bottom-section {
     display: grid;
     background: #323;
 }
@@ -109,7 +99,3 @@ body {
 .legal {
 
 }
-
-
-
-
