@@ -3,11 +3,11 @@
 html {
     box-sizing: border-box;
     font-family: Lucida Console, sans serif;
-    background-color: darkgray;
+    background-color: #27272c;
 }
 
 body {
-    background: gray;
+    background: #27272c;
     margin: 0;
     line-height: 1.4;
 }
@@ -34,9 +34,12 @@ body {
     grid-auto-rows: 60px;
     grid-gap: 5px;
     background: #525560;
-    border-bottom: solid;
-    border-color: #232529;
-    border-width: 5px
+    border: solid;
+    border-color: #17171c;
+    border-width: 3px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px black;
+
 }
 
 .header-inside img {
@@ -55,7 +58,7 @@ body {
     justify-content: flex-end;
     align-items: flex-end;
     font-size: 42px;
-    text-shadow: 0 0 3px darkblue;
+    text-shadow: 0 0 3px #9d9daf;
     position: relative;
     height: 75px;
     left: -5px;
