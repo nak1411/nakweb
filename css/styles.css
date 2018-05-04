@@ -2,14 +2,18 @@
 html {
     box-sizing: border-box;
     font-family: Lucida Console, sans serif;
-    background-color: #27272c;
+    background-color: gray;
 }
 
 body {
     max-width: 100%;
     background: #27272c;
-    margin: 5px;
+    margin: 0;
     line-height: 1.4;
+    border: solid;
+    border-width: 3px;
+    border-radius: 20px;
+    box-shadow: 0 0 50px black;
 }
 
 .container {
