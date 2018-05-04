@@ -19,7 +19,6 @@ body {
 /***TOP SECTION***/
 .header-inside {
     display: grid;
-    grid-template-columns: 2;
     grid-auto-rows: 60px;
     grid-gap: 5px;
     background: #525560;
@@ -85,7 +84,6 @@ body {
 /***BOTTOM SECTION***/
 .bottom-section {
     display: grid;
-    grid-template-columns: 1;
     grid-gap: 10px;
     background: #27272c;
     border: solid;
@@ -223,6 +221,7 @@ footer {
         border-width: 5px;
         border-color: #17171c;
     }
+}
 
 @media screen and (max-width: 400px) {
 
