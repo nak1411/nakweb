@@ -16,14 +16,6 @@ body {
     grid-gap: 10px;
 }
 
-@media screen and (min-width: 960px) {
-    body {
-        width: 960px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
 /***TOP SECTION***/
 .header-inside {
     display: grid;
@@ -36,12 +28,13 @@ body {
     border-width: 3px;
     border-radius: 10px;
     box-shadow: 0 0 3px black;
+    margin: 5px;
 }
 
 .header-inside img {
     grid-column: 1;
     grid-row: 1;
-    min-height: 120px;
+    max-height: 120px;
 }
 
 .header-inside h1 {
@@ -81,9 +74,10 @@ body {
     border-width: 3px;
     border-radius: 10px;
     box-shadow: 0 0 3px black;
+    margin: 5px;
 }
 .mid-section img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
     border-radius: 10px;
 }
@@ -91,8 +85,7 @@ body {
 /***BOTTOM SECTION***/
 .bottom-section {
     display: grid;
-    grid-template-columns: 3;
-    grid-template-rows: 2;
+    grid-template-columns: 1;
     grid-gap: 10px;
     background: #27272c;
     border: solid;
@@ -100,6 +93,7 @@ body {
     border-width: 3px;
     border-radius: 10px;
     box-shadow: 0 0 3px black;
+    margin: 5px;
 }
 
 .bottom-section h2 {
@@ -117,6 +111,9 @@ body {
     box-shadow: 0 0 10px black;
     margin: 0;
     padding: 0;
+}
+
+.box {
 }
 
 .bottom-section img:hover {
@@ -142,4 +139,84 @@ body {
 
 footer {
     color: white;
+    display: flex;
+    justify-content: center;
+}
+
+/***MEDIA QUERIES***/
+@media screen and (min-width: 960px) {
+    body {
+        width: 960px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (max-width: 700px) {
+
+    .bottom-section h2 {
+        font-size: 16px;
+    }
+
+    .project-link {
+        font-size: 10px;
+    }
+
+    footer {
+        font-size: 12px;
+    }
+
+    .header-inside {
+        grid-auto-rows: 30px;
+    }
+
+    .header-inside h1 {
+        font-size: 28px;
+        justify-content: flex-end;
+        align-items: flex-start;
+    }
+
+    .header-inside h2 {
+        font-size: 16px;
+    }
+
+    .header-inside img {
+        height: 60px;
+
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+
+    .bottom-section {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .bottom-section h2 {
+        font-size: 24px;
+    }
+
+    .project-link {
+        font-size: 12px;
+    }
+
+    footer {
+        font-size: 12px;
+    }
+
+    @media screen and (max-width: 400px) {
+
+    .bottom-section h2 {
+        font-size: 18px;
+    }
+
+    .project-link {
+        font-size: 10px;
+    }
+
+    footer {
+        font-size: 12px;
+    }
 }
