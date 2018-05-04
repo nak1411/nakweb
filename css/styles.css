@@ -6,21 +6,23 @@ html {
 }
 
 body {
+    max-width: 100%;
     background: #27272c;
-    margin: 0;
+    margin: 5px;
     line-height: 1.4;
 }
 
 .container {
+    width: 100%;
     display: grid;
     grid-gap: 10px;
 }
 
 /***TOP SECTION***/
 .header-inside {
+    max-width: 100%;
     display: grid;
     grid-auto-rows: 60px;
-    grid-gap: 5px;
     background: #525560;
     border: solid;
     border-color: #17171c;
@@ -31,12 +33,15 @@ body {
 }
 
 .header-inside img {
+    max-width: 100%;
     grid-column: 1;
     grid-row: 1;
     max-height: 120px;
+    width: auto;
 }
 
 .header-inside h1 {
+    max-width: 100%;
     grid-column: 2;
     grid-row: 1;
     display: flex;
@@ -53,6 +58,7 @@ body {
 }
 
 .header-inside h2 {
+    max-width: 100%;
     grid-column: 2;
     grid-row: 2;
     display: flex;
@@ -67,6 +73,7 @@ body {
 
 /***MID SECTION***/
 .mid-section {
+    max-width: 100%;
     display: grid;
     border: solid;
     border-color: #17171c;
@@ -83,8 +90,8 @@ body {
 
 /***BOTTOM SECTION***/
 .bottom-section {
-    display: grid;
-    grid-gap: 10px;
+    max-width: 100%;
+    display: flex;
     background: #27272c;
     border: solid;
     border-color: #17171c;
@@ -95,6 +102,7 @@ body {
 }
 
 .bottom-section h2 {
+    width: 100%;
     display: flex;
     justify-content: center;
     color: #ff6600;
@@ -103,7 +111,7 @@ body {
 }
 
 .bottom-section img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
     border-radius: 10px;
     box-shadow: 0 0 10px black;
@@ -118,6 +126,7 @@ body {
 
 
 .project-link {
+    width: 100%;
     display: flex;
     justify-content: center;
     color: #ff6600
@@ -127,7 +136,18 @@ body {
     color: white;
 }
 
+.description {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
 #featured {
+    width: 100%;
     display: flex;
     color: #ff6600;
     text-decoration: underline;
@@ -135,15 +155,16 @@ body {
     font-size: 32px;
     margin: 0;
     padding: 0;
-
 }
 
 .box {
-    grid-row: 1;
+    width: 100%;
     margin: 10px;
+    text-align: center;
 }
 
 footer {
+    max-width: 100%;
     color: white;
     display: flex;
     justify-content: center;
@@ -152,7 +173,7 @@ footer {
 /***MEDIA QUERIES***/
 @media screen and (min-width: 960px) {
     body {
-        width: 960px;
+        width: 58em;
         margin-left: auto;
         margin-right: auto;
     }
@@ -161,37 +182,41 @@ footer {
 @media screen and (max-width: 700px) {
 
     .bottom-section h2 {
-        font-size: 16px;
+        font-size: 1em;
     }
 
     .project-link {
-        font-size: 10px;
+        font-size: 0.625em;
     }
 
     footer {
-        font-size: 12px;
+        font-size: 0.75em;
     }
 
     .header-inside {
-        grid-auto-rows: 30px;
+        grid-auto-rows: 1.875em;
     }
 
     .header-inside h1 {
-        font-size: 28px;
+        font-size: 1.75em;
         justify-content: flex-end;
         align-items: flex-start;
     }
 
     .header-inside h2 {
-        font-size: 16px;
+        font-size: 1em;
     }
 
     .header-inside img {
-        height: 60px;
+        height: 3.75em;
     }
 
     #featured {
-        font-size: 24px;
+        font-size: 1.5em;
+    }
+
+    .description {
+        font-size: 0.75em;
     }
 
 }
@@ -204,40 +229,76 @@ footer {
     }
 
     .bottom-section h2 {
-        font-size: 24px;
+        font-size: 1.5em;
     }
 
     .project-link {
-        font-size: 12px;
+        font-size: 0.75em;
     }
 
     footer {
-        font-size: 12px;
+        font-size: 0.75em;
     }
 
     #featured {
-        font-size: 32px;
+        font-size: 2em;
         border-bottom: groove;
-        border-width: 5px;
+        border-width: 0.2125em;
         border-color: #17171c;
     }
 }
 
 @media screen and (max-width: 400px) {
 
+    .header-inside h1 {
+        font-size: 1.25em;
+        justify-content: flex-end;
+        align-items: flex-start;
+    }
+
+    .header-inside h2 {
+        font-size: 0.75em;
+    }
+
     .bottom-section h2 {
         font-size: 18px;
     }
 
     .project-link {
-        font-size: 10px;
+        font-size: 0.625em;
     }
 
     footer {
-        font-size: 12px;
+        font-size: 0.75em;
     }
 
     #featured {
-        font-size: 28px;
+        font-size: 1.75em;
+    }
+
+    .description {
+        font-size: 0.625em;
+    }
+}
+
+@media screen and (max-width: 275px) {
+
+    .header-inside h1 {
+        font-size: 1em;
+        justify-content: flex-end;
+        align-items: flex-start;
+    }
+
+    .header-inside h2 {
+        font-size: 0.55em;
+    }
+
+    .header-inside img {
+        max-width: 2.5em;
+        height: auto;
+    }
+
+    .header-inside {
+        grid-auto-rows: 1.25em;
     }
 }
