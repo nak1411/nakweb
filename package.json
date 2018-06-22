@@ -1,0 +1,30 @@
+{
+  "name": "nakdev",
+  "version": "1.0.0",
+  "description": "nakdev web portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nak1411/web_portfolio_project.git"
+  },
+  "keywords": [
+    "nakdev",
+    "portfolio",
+    "website",
+    "justin",
+    "schlump",
+    "nak"
+  ],
+  "author": "Justin Schlump",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nak1411/web_portfolio_project/issues"
+  },
+  "homepage": "https://github.com/nak1411/web_portfolio_project#readme",
+  "dependencies": {
+    "foundation-sites": "^6.4.4-rc1"
+  }
+}
