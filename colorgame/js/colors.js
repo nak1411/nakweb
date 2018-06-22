@@ -28,8 +28,6 @@ function init() {
   squares[4].visibility = "hidden";
   squares[5].visibility = "hidden";
   easyDif.style.background = "white";
-  easyDif.style.border = "8px solid black";
-
   isInitialized = true;
 }
 
@@ -50,18 +48,14 @@ function main() {
   hardDif.addEventListener("click", function(){
     isHard = true;
     hardDif.style.background = "white";
-    hardDif.style.border = "8px solid black";
     easyDif.style.background = "#f44336";
-    easyDif.style.border = "2px solid black";
   });
 
   // Reset game and reduce number of squares
   easyDif.addEventListener("click", function(){
     isHard = false;
     easyDif.style.background = "white";
-    easyDif.style.border = "8px solid black";
     hardDif.style.background = "#f44336";
-    hardDif.style.border = "2px solid black";
   });
 }
 

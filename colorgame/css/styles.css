@@ -63,6 +63,7 @@ button:focus {
 #result {
   display: inline-block;
   font-family: 'Oswald', sans-serif;
+  color: orange;
   font-weight: 100;
   font-size: 1.5em;
   width: 40%;
@@ -76,4 +77,51 @@ button:focus {
   padding-bottom: 30%;
   float: left;
   margin: 1.66%;
+}
+
+@media screen and (max-width: 530px) {
+  h1 {
+    font-size: 3em;
+  }
+
+  button {
+    font-size: 1.2em;
+  }
+}
+
+@media screen and (max-width: 410px) {
+  h1 {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 1.2em;
+  }
+
+  button {
+    font-size: .8em;
+    border-radius: 4px;
+  }
+
+  #result {
+    font-size: 1.2em;
+  }
+
+@media screen and (max-width: 310px) {
+  h1 {
+    font-size: 1.5em;
+  }
+
+  h2 {
+    font-size: 1em;
+  }
+
+  button {
+    font-size: .5em;
+    border-radius: 2px;
+  }
+
+  #result {
+    font-size: .9em;
+  }
 }
