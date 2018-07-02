@@ -6,7 +6,7 @@ $('input[name=hike-entry]').keypress(function (event) {
     var inputText = $(this).val();
     if (inputText !== '') {
       $('.item-list').append('<li><span><i class=image></i></span>' +
-                           inputText + '</li>');
+        inputText + '</li>');
       $(this).val('');
     } else {
       alert('Enter Something');
@@ -19,7 +19,7 @@ $('button').on('click', function () {
   var inputText = $('input[name=hike-entry]').val();
   if (inputText !== '') {
     $('.item-list').append('<li><span><i class=image></i></span>' +
-                           inputText + '</li>');
+      inputText + '</li>');
     $('input[name=hike-entry]').val('');
   } else {
     alert('Enter Something');

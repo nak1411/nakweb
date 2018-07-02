@@ -115,15 +115,12 @@ li:hover .image {
   10%, 90% {
     transform: translate3d(-.03em, -.03em, -.03em);
   }
-
   20%, 80% {
     transform: translate3d(.03em, -.03em, -.03em);
   }
-
   30%, 50%, 70% {
     transform: translate3d(-.05em, -.05em, -.05em);
   }
-
   40%, 60% {
     transform: translate3d(.05em, -.05em, -.05em);
   }
@@ -134,20 +131,18 @@ footer {
 }
 
 /*MEDIA QUERIES*/
+
 @media screen and (max-width: 540px) {
   h1 {
     font-size: 1.5em;
     height: 1em;
   }
-
   button {
     font-size: .4em;
   }
-
   input {
     font-size: .4em;
   }
-
   .item-list {
     font-size: .8em;
   }
@@ -158,58 +153,45 @@ footer {
     font-size: 1em;
     height: .7em;
   }
-
   h2 {
     font-size: 1.2em;
   }
-
   button {
     font-size: .3em;
   }
-
   input {
     font-size: .3em;
     width: 70%;
   }
-
   .item-list {
     font-size: .6em;
   }
-
   .header {
     border-bottom: .1em solid black;
   }
-
   footer {
     font-size: .6em;
   }
 }
-
 
 @media screen and (max-width: 310px) {
   h1 {
     font-size: .6em;
     height: .4em;
   }
-
   button {
     font-size: .2em;
   }
-
   input {
     font-size: .2em;
   }
-
   .item-list {
     font-size: .4em;
   }
-
   .header {
     border-bottom: .08em solid black;
   }
-
   footer {
     font-size: .4em;
   }
 }
-
