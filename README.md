@@ -4,6 +4,4 @@
 
 Behold my portfolio website.  Responsive design and some cool styles.
 
-## How to run:
-
-Open index.html in your browser.
+# [My Portfolio Clicky](nakdev.net)
