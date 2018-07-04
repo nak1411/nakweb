@@ -10,7 +10,7 @@ $('input[name=hike-entry]').keypress(function (event) {
   if (event.which === 13) {
     inputText = $(this).val();
     if (inputText !== '') {
-      $('.item-list').append('<li><span><i class=image></i></span>' + inputText + '</li>');
+      $('.item-list').append('<li><span><i class=trash></i></span>' + inputText + '</li>');
       $(this).val('');
     } else {
       alert('Enter Something');
@@ -22,7 +22,7 @@ $('input[name=hike-entry]').keypress(function (event) {
 $('button').on('click', function () {
   var inputText = $('input[name=hike-entry]').val();
   if (inputText !== '') {
-    $('.item-list').append('<li><span><i class=image></i></span>' +
+    $('.item-list').append('<li><span><i class=trash></i></span>' +
       inputText + '</li>');
     $('input[name=hike-entry]').val('');
   } else {
@@ -36,12 +36,14 @@ $('.item-list').on('click', '.image', function (event) {
   $(this).closest('li').remove();
 });
 
-//Autosave entered data
+// Autosave entered data
 setInterval(function () {
   localStorage.setItem('entry', $('.item-list').html());
 }, 5000);
 
-//Save data on close
+// Save data on close
 $(window).on('beforeunload', function () {
   localStorage.setItem('entry', $('.item-list').html());
 });
+
+//TODO: Create functionality for each input
