@@ -1,7 +1,7 @@
 /* global $ alert */
 
 //Fetch stored data on page load
-window.addEventListener('load', function (event) {
+$(window).ready(function () {
   $('.item-list').html(localStorage.getItem('entry'));
 });
 
@@ -40,3 +40,8 @@ $('.item-list').on('click', '.image', function (event) {
 setInterval(function () {
   localStorage.setItem('entry', $('.item-list').html());
 }, 5000);
+
+//Save data on close
+$(window).on('beforeunload', function () {
+  localStorage.setItem('entry', $('.item-list').html());
+});
