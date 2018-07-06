@@ -1,49 +1,102 @@
 /* global $ alert */
 
-//Fetch stored data on page load
-$(window).ready(function () {
-  $('.item-list').html(localStorage.getItem('entry'));
-});
+var UIsetup = (function () {
+  var DOMstrings = {
+    list: '.item-list',
+    storageEntry: 'entry',
+    button: '#add-btn',
+    inputName: 'input[name=hike-entry]',
+    inputLocation: 'input[name=location-entry]',
+    inputLength: 'input[name=length-entry]',
+    inputElevation: 'input[name=elevation-entry]',
+    trashIcon: '.trash',
+  };
 
-// Add text from input to list after Enter is pressed
-$('input[name=hike-entry]').keypress(function (event) {
-  if (event.which === 13) {
-    inputText = $(this).val();
-    if (inputText !== '') {
-      $('.item-list').append('<li><span><i class=trash></i></span>' + inputText + '</li>');
-      $(this).val('');
-    } else {
-      alert('Enter Something');
-    }
-  }
-});
+  return {
+    getDOMstrings: function () {
+      return DOMstrings;
+    },
+  };
 
-// Add text from input to list afer "+" button is pressed
-$('button').on('click', function () {
-  var inputText = $('input[name=hike-entry]').val();
-  if (inputText !== '') {
-    $('.item-list').append('<li><span><i class=trash></i></span>' +
-      inputText + '</li>');
-    $('input[name=hike-entry]').val('');
-  } else {
-    alert('Enter Something');
-  }
-});
+})();
 
-// Delete item off list
-$('.item-list').on('click', '.image', function (event) {
-  event.stopPropagation();
-  $(this).closest('li').remove();
-});
+var controller = (function () {
+  var DOM = UIsetup.getDOMstrings();
 
-// Autosave entered data
-setInterval(function () {
-  localStorage.setItem('entry', $('.item-list').html());
-}, 5000);
+  /**
+   * Set up event handling for adding items
+   **/
+  var addItems = function () {
 
-// Save data on close
-$(window).on('beforeunload', function () {
-  localStorage.setItem('entry', $('.item-list').html());
-});
+    // Add text from input to list after Enter is pressed
+    $(document).on('keypress', function (event) {
+      if (event.keyCode === 13 || event.which === 13) {
+        if ($(DOM.inputName).val() !== '') {
+          appendItem();
+          $(DOM.inputName).val('');
+        } else {
+          alert('Enter Something');
+        }
+      }
+    });
 
-//TODO: Create functionality for each input
+    // Add text from input to list after "+" button is pressed
+    $(DOM.button).on('click', function () {
+      if ($(DOM.inputName).val() !== '') {
+        appendItem();
+        $(DOM.inputName).val('');
+      } else {
+        alert('Enter Something');
+      }
+    });
+
+    // String to be appended to list
+    var appendItem = function () {
+      $(DOM.list).append('<li><span><i class=trash></i></span>' +
+        $(DOM.inputName).val() + '</li>');
+    };
+  };
+
+  /**
+   * Removing items off of list
+   **/
+  var removeItems = function () {
+    // Delete item off list
+    $(DOM.list).on('click', DOM.trashIcon, function (event) {
+      $(this).closest('li').remove();
+    });
+  };
+
+  /**
+   * Handle local storage
+   **/
+  var storageHandler = function () {
+    //Fetch stored data on page load
+    $(window).ready(function () {
+      $(UIsetup.getDOMstrings().list)
+        .html(localStorage.getItem(UIsetup.getDOMstrings().storageEntry));
+    });
+
+    // Autosave entered data
+    setInterval(function () {
+      localStorage.setItem(UIsetup.getDOMstrings().storageEntry,
+        $(UIsetup.getDOMstrings().list).html());
+    }, 5000);
+
+    // Save data on close
+    $(window).on('beforeunload', function () {
+      localStorage.setItem(UIsetup.getDOMstrings().storageEntry,
+        $(UIsetup.getDOMstrings().list).html());
+    });
+  };
+
+  return {
+    init: function () {
+      addItems();
+      removeItems();
+      storageHandler();
+    },
+  };
+})();
+
+controller.init();
