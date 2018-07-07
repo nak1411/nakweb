@@ -140,3 +140,5 @@ function vectorRGB() {
 }
 
 main();
+
+//TODO: Firefox not liking this

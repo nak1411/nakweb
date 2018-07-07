@@ -100,3 +100,5 @@ var controller = (function () {
 })();
 
 controller.init();
+
+//TODO: Firefox and IE not liking this
