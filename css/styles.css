@@ -1,273 +1,282 @@
 /***GENERAL***/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
 html {
-    box-sizing: border-box;
-    font-family: Lucida Console, sans serif;
-    background-color: gray;
+  box-sizing: border-box;
+  font-family: Lucida Console, sans serif;
+  background-color: gray;
 }
 
 body {
-    max-width: 100%;
-    background: #27272c;
-    margin: 0;
-    line-height: 1.4;
-    border: solid;
-    border-width: 3px;
-    border-radius: 20px;
-    box-shadow: 0 0 50px black;
-}
-
-.container {
-    width: 100%;
-    display: grid;
-    grid-gap: 10px;
+  background: #27272c;
+  line-height: 1.4;
+  border: solid;
+  border-width: 3px;
+  border-radius: 20px;
+  box-shadow: 0 0 50px black;
 }
 
 /***TOP SECTION***/
+
 .header-inside {
-    max-width: 100%;
-    display: grid;
-    grid-auto-rows: 60px;
-    background: #525560;
-    border: solid;
-    border-color: #17171c;
-    border-width: 3px;
-    border-radius: 10px;
-    box-shadow: 0 0 3px black;
-    margin: 5px;
+  display: grid;
+  margin: 5px;
+  grid-auto-rows: 60px;
+  background: #525560;
+  border: solid;
+  border-color: #17171c;
+  border-width: 3px;
+  border-radius: 10px;
+  box-shadow: 0 0 3px black;
 }
 
 .header-inside h1 {
-    max-width: 100%;
-    grid-column: 2;
-    grid-row: 1;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    font-size: 42px;
-    color: #ff6600;
-    text-shadow: 0 0 5px black;
-    position: relative;
-    height: 75px;
-    left: -5px;
-    margin: 0;
-    padding: 0;
+  display: block;
+  grid-column: 2;
+  grid-row: 1;
+  text-align: right;
+  font-size: 42px;
+  color: #ff6600;
+  text-shadow: 0 0 5px black;
 }
 
 .header-inside h2 {
-    max-width: 100%;
-    grid-column: 2;
-    grid-row: 2;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
-    font-size: 20px;
-    position: relative;
-    left: -5px;
-    margin: 0;
-    padding: 0;
+  display: block;
+  grid-column: 2;
+  grid-row: 2;
+  text-align: right;
+  font-size: 20px;
+}
+
+.badges {
+  display: block;
+  margin: auto 2%;
+}
+
+#linkedin>img {
+  margin: 2% auto;
+  margin-right: .5em;
+  width: 2.5em;
+  float: left;
+}
+
+#github>img {
+  margin: 2% auto;
+  margin-right: .5em;
+  width: 2.5em;
+  float: left;
 }
 
 /***BOTTOM SECTION***/
+
 .bottom-section {
-    max-width: 100%;
-    display: flex;
-    background: #27272c;
-    border: solid;
-    border-color: #17171c;
-    border-width: 3px;
-    border-radius: 10px;
-    box-shadow: 0 0 3px black;
-    margin: 5px;
+  margin: 5px;
+  display: flex;
+  background: #27272c;
+  border: solid;
+  border-color: #17171c;
+  border-width: 3px;
+  border-radius: 10px;
+  box-shadow: 0 0 3px black;
 }
 
 .bottom-section h2 {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    color: #ff6600;
-    margin: 0;
-    padding: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  color: #ff6600;
 }
 
 .bottom-section img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 0 10px black;
-    margin: 0;
-    padding: 0;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px black;
 }
 
 .bottom-section img:hover {
-    -webkit-filter: blur(1px) grayscale(100%);
-    filter: blur(1px) grayscale(100%);
+  -webkit-filter: blur(1px) grayscale(100%);
+  filter: blur(1px) grayscale(100%);
 }
 
 .project-link {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    color: #ff6600
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  color: #ff6600
 }
 
 .project-link:hover {
-    color: white;
+  color: white;
 }
 
 .description {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    font-size: 14px;
-    color: white;
-    margin: 0;
-    padding: 0;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  font-size: 14px;
+  color: white;
 }
 
 #featured {
-    width: 100%;
-    display: flex;
-    color: #ff6600;
-    text-decoration: underline;
-    justify-content: center;
-    font-size: 32px;
-    margin: 0;
-    padding: 0;
+  display: flex;
+  width: 100%;
+  color: #ff6600;
+  text-decoration: underline;
+  justify-content: center;
+  font-size: 32px;
 }
 
 .box {
-    width: 100%;
-    margin: 10px;
-    text-align: center;
+  width: 100%;
+  margin: 10px;
+  text-align: center;
 }
 
 footer {
-    max-width: 100%;
-    color: white;
-    display: flex;
-    justify-content: center;
+  display: flex;
+  color: white;
+  justify-content: center;
 }
 
 /***MEDIA QUERIES***/
+
 @media screen and (min-width: 960px) {
-    body {
-        width: 58em;
-        margin-left: auto;
-        margin-right: auto;
-    }
+  body {
+    width: 59em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
 }
 
 @media screen and (max-width: 700px) {
-
-    .bottom-section h2 {
-        font-size: 1em;
-    }
-
-    .project-link {
-        font-size: 0.625em;
-    }
-
-    footer {
-        font-size: 0.75em;
-    }
-
-    .header-inside {
-        grid-auto-rows: 1.875em;
-    }
-
-    .header-inside h1 {
-        font-size: 1.75em;
-        justify-content: flex-end;
-        align-items: flex-start;
-    }
-
-    .header-inside h2 {
-        font-size: 1em;
-    }
-
-    #featured {
-        font-size: 1.5em;
-    }
-
-    .description {
-        font-size: 0.75em;
-    }
-
+  .bottom-section h2 {
+    font-size: 1em;
+  }
+  .project-link {
+    font-size: 0.625em;
+  }
+  footer {
+    font-size: 0.75em;
+  }
+  .header-inside {
+    grid-auto-rows: 1.875em;
+  }
+  .header-inside h1 {
+    font-size: 1.75em;
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
+  .header-inside h2 {
+    font-size: 1em;
+  }
+  #featured {
+    font-size: 1.5em;
+  }
+  .description {
+    font-size: 0.75em;
+  }
 }
 
 @media screen and (max-width: 500px) {
+  .bottom-section {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .bottom-section h2 {
+    font-size: 1.5em;
+  }
+  .project-link {
+    font-size: 0.75em;
+  }
+  footer {
+    font-size: 0.75em;
+  }
+  #featured {
+    font-size: 2em;
+    border-bottom: groove;
+    border-width: 0.2125em;
+    border-color: #17171c;
+  }
 
-    .bottom-section {
-        display: flex;
-        flex-wrap: wrap;
-    }
+  #linkedin>img {
+    margin: 2% auto;
+    margin-right: .5em;
+    width: 2em;
+  }
 
-    .bottom-section h2 {
-        font-size: 1.5em;
-    }
-
-    .project-link {
-        font-size: 0.75em;
-    }
-
-    footer {
-        font-size: 0.75em;
-    }
-
-    #featured {
-        font-size: 2em;
-        border-bottom: groove;
-        border-width: 0.2125em;
-        border-color: #17171c;
-    }
+  #github>img {
+    margin: 2% auto;
+    margin-right: .5em;
+    width: 2em;
+  }
 }
 
 @media screen and (max-width: 400px) {
+  .header-inside h1 {
+    font-size: 1.25em;
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
+  .header-inside h2 {
+    font-size: 0.75em;
+  }
+  .bottom-section h2 {
+    font-size: 18px;
+  }
+  .project-link {
+    font-size: 0.625em;
+  }
+  footer {
+    font-size: 0.75em;
+  }
+  #featured {
+    font-size: 1.75em;
+  }
+  .description {
+    font-size: 0.625em;
+  }
 
-    .header-inside h1 {
-        font-size: 1.25em;
-        justify-content: flex-end;
-        align-items: flex-start;
-    }
+  #linkedin>img {
+    margin: 2% auto;
+    margin-right: .5em;
+    width: 1.05em;
+  }
 
-    .header-inside h2 {
-        font-size: 0.75em;
-    }
-
-    .bottom-section h2 {
-        font-size: 18px;
-    }
-
-    .project-link {
-        font-size: 0.625em;
-    }
-
-    footer {
-        font-size: 0.75em;
-    }
-
-    #featured {
-        font-size: 1.75em;
-    }
-
-    .description {
-        font-size: 0.625em;
-    }
+  #github>img {
+    margin: 2% auto;
+    margin-right: .5em;
+    width: 1.05em;
+  }
 }
 
 @media screen and (max-width: 275px) {
+  .header-inside h1 {
+    font-size: 1em;
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
+  .header-inside h2 {
+    font-size: 0.55em;
+  }
+  .header-inside {
+    grid-auto-rows: 1.25em;
+  }
 
-    .header-inside h1 {
-        font-size: 1em;
-        justify-content: flex-end;
-        align-items: flex-start;
-    }
+  #linkedin>img {
+    margin: 2% auto;
+    margin-right: .5em;
+    width: 1em;
+  }
 
-    .header-inside h2 {
-        font-size: 0.55em;
-    }
-
-    .header-inside {
-        grid-auto-rows: 1.25em;
-    }
+  #github>img {
+    margin: 2% auto;
+    margin-right: .5em;
+    width: 1em;
+  }
 }
