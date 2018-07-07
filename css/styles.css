@@ -205,14 +205,10 @@ footer {
   }
 
   #linkedin>img {
-    margin: 2% auto;
-    margin-right: .5em;
     width: 2em;
   }
 
   #github>img {
-    margin: 2% auto;
-    margin-right: .5em;
     width: 2em;
   }
 }
@@ -243,15 +239,11 @@ footer {
   }
 
   #linkedin>img {
-    margin: 2% auto;
-    margin-right: .5em;
-    width: 1.05em;
+    width: 1.75em;
   }
 
   #github>img {
-    margin: 2% auto;
-    margin-right: .5em;
-    width: 1.05em;
+    width: 1.75em;
   }
 }
 
@@ -269,14 +261,10 @@ footer {
   }
 
   #linkedin>img {
-    margin: 2% auto;
-    margin-right: .5em;
     width: 1em;
   }
 
   #github>img {
-    margin: 2% auto;
-    margin-right: .5em;
     width: 1em;
   }
 }
