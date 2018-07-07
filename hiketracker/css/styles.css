@@ -35,6 +35,15 @@ h1 {
   text-align: center;
 }
 
+#gohome {
+  color: black;
+  text-decoration: none;
+  font-weight: bolder;
+  font-size: .8em;
+  border: dashed .08em;
+  border-radius: .15em;
+}
+
 hr {
   border-color: black;
 }
@@ -199,6 +208,10 @@ footer {
   .item-list {
     font-size: .8em;
   }
+
+  #gohome {
+    font-size: .5em;
+  }
 }
 
 @media screen and (max-width: 410px) {
@@ -232,6 +245,9 @@ footer {
   footer {
     font-size: .6em;
   }
+  #gohome {
+    font-size: .4em;
+  }
 }
 
 @media screen and (max-width: 310px) {
@@ -264,5 +280,8 @@ footer {
 
   footer {
     font-size: .4em;
+  }
+  #gohome {
+    font-size: .3em;
   }
 }

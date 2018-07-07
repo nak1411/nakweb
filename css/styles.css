@@ -362,11 +362,11 @@ footer {
   }
 
   #linkedin>img {
-    width: 1.3em;
+    width: 1em;
   }
 
   #github>img {
-    width: 1.3em;
+    width: 1em;
   }
 
   #me {
@@ -402,7 +402,7 @@ footer {
     grid-auto-rows: 1.25em;
   }
 
-  #linkedin>img {s
+  #linkedin>img {
     width: 1em;
   }
 
