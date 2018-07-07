@@ -24,7 +24,7 @@ body {
 
 .header-inside {
   display: grid;
-  margin: 5px;
+  margin: .4em;
   grid-auto-rows: 60px;
   background: #525560;
   border: solid;
@@ -41,7 +41,7 @@ body {
   text-align: right;
   font-size: 42px;
   color: #ff6600;
-  text-shadow: 0 0 5px black;
+  text-shadow: 0 0 4px black;
 }
 
 .header-inside h2 {
@@ -72,9 +72,42 @@ body {
 }
 
 /***BOTTOM SECTION***/
+.biopic {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#me {
+  margin: .5em;
+  width: 15em;
+  height: 15em;
+  border-radius: 10%;
+  box-shadow: 0 0 .5em black;
+}
+
+#bio {
+  margin: .5em;
+  width: 100%;
+  color: white;
+  text-align: left;
+  line-height: 1.2em;
+  font-size: 1.1em;
+}
+
+.bio-section {
+  margin: .4em;
+  background: #27272c;
+  border: solid;
+  border-color: #17171c;
+  border-width: 3px;
+  border-radius: 10px;
+  box-shadow: 0 0 3px black;
+}
 
 .bottom-section {
-  margin: 5px;
+  margin: .4em;
   display: flex;
   background: #27272c;
   border: solid;
@@ -181,6 +214,15 @@ footer {
   .description {
     font-size: 0.75em;
   }
+  #me {
+    width: 10em;
+    height: 10em;
+    box-shadow: 0 0 .4em black;
+  }
+  #bio {
+    line-height: 1.1em;
+    font-size: .8em;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -211,6 +253,15 @@ footer {
   #github>img {
     width: 2em;
   }
+  #me {
+    width: 8em;
+    height: 8em;
+    box-shadow: 0 0 .4em black;
+  }
+  #bio {
+    line-height: 1em;
+    font-size: .7em;
+  }
 }
 
 @media screen and (max-width: 400px) {
@@ -239,11 +290,20 @@ footer {
   }
 
   #linkedin>img {
-    width: 1.75em;
+    width: 1.3em;
   }
 
   #github>img {
-    width: 1.75em;
+    width: 1.3em;
+  }
+  #me {
+    width: 5em;
+    height: 5em;
+    box-shadow: 0 0 .4em black;
+  }
+  #bio {
+    line-height: 1.1em;
+    font-size: .5em;
   }
 }
 
