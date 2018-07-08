@@ -76,6 +76,13 @@ body {
   float: left;
 }
 
+#gmail>img {
+  margin: 2% auto;
+  margin-right: .5em;
+  width: 2.5em;
+  float: left;
+}
+
 /***BOTTOM SECTION***/
 .biopic {
   height: 100%;
@@ -305,11 +312,15 @@ footer {
   }
 
   #linkedin>img {
-    width: 2em;
+    width: 1.4em;
   }
 
   #github>img {
-    width: 2em;
+    width: 1.4em;
+  }
+
+  #gmail>img {
+    width: 1.4em;
   }
 
   #me {
@@ -327,7 +338,7 @@ footer {
 @media screen and (max-width: 400px) {
 
   .header-inside h1 {
-    font-size: 1.25em;
+    font-size: 1.2em;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
@@ -362,11 +373,15 @@ footer {
   }
 
   #linkedin>img {
-    width: 1em;
+    width: 1.5em;
   }
 
   #github>img {
-    width: 1em;
+    width: 1.5em;
+  }
+
+  #gmail>img {
+    width: 1.5em;
   }
 
   #me {
@@ -407,6 +422,10 @@ footer {
   }
 
   #github>img {
+    width: 1em;
+  }
+
+  #gmail>img {
     width: 1em;
   }
 }
