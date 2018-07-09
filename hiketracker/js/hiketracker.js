@@ -3,13 +3,17 @@
 var UIsetup = (function () {
   var DOMstrings = {
     list: '.item-list',
+    entrydata: '.entry-data',
     storageEntry: 'entry',
     button: '#add-btn',
     inputName: 'input[name=hike-entry]',
     inputLocation: 'input[name=location-entry]',
     inputLength: 'input[name=length-entry]',
     inputElevation: 'input[name=elevation-entry]',
-    trashIcon: '.trash',
+    trashIcon: '#input-trash',
+    listedItem: '#input-name',
+    dropdown: '#dropdown',
+    dropcontent: '.dropdown-content',
   };
 
   return {
@@ -33,7 +37,7 @@ var controller = (function () {
       if (event.keyCode === 13 || event.which === 13) {
         if ($(DOM.inputName).val() !== '') {
           appendItem();
-          $(DOM.inputName).val('');
+          $(DOM.entrydata).contents().val('');
         } else {
           alert('Enter Something');
         }
@@ -44,7 +48,7 @@ var controller = (function () {
     $(DOM.button).on('click', function () {
       if ($(DOM.inputName).val() !== '') {
         appendItem();
-        $(DOM.inputName).val('');
+        $(DOM.entrydata).contents().val('');
       } else {
         alert('Enter Something');
       }
@@ -52,9 +56,25 @@ var controller = (function () {
 
     // String to be appended to list
     var appendItem = function () {
-      $(DOM.list).append('<li><span><i class=trash></i></span>' +
-        $(DOM.inputName).val() + '</li>');
+      $(DOM.list).append('<li><span id=input-trash title=Delete></span>' +
+        '<div class=dropdown-container>' +
+        '<span id=input-name title=Details>' + $(DOM.inputName).val() + '</span>' +
+        '<div id=dropdown class=dropdown-content>' +
+        '<span id=input-location><u>Location:</u> ' +
+        $(DOM.inputLocation).val() + '</span>' + '<br/>' +
+        '<span id=input-length><u>Length:</u> ' +
+        $(DOM.inputLength).val() +
+        ' miles</span>' + '<br/>' +
+        '<span id=input-elevation><u>Elevation:</u> ' +
+        $(DOM.inputElevation).val() + ' ft.</span>' + '</div></div></li>');
     };
+  };
+
+  // Expand detail dropdown
+  var expandDropdown = function () {
+    $(DOM.list).on('click', DOM.listedItem, function () {
+      $(this).next().slideToggle(200);
+    });
   };
 
   /**
@@ -94,11 +114,14 @@ var controller = (function () {
     init: function () {
       addItems();
       removeItems();
+      expandDropdown();
       storageHandler();
     },
   };
 })();
 
 controller.init();
+
+//localStorage.clear();
 
 //TODO: Firefox and IE not liking this
