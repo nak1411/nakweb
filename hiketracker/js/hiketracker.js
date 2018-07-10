@@ -1,7 +1,7 @@
 /* global $ alert */
 
-var UIsetup = (function () {
-  var DOMstrings = {
+const UIsetup = (() => {
+  const DOMstrings = {
     list: '.item-list',
     entrydata: '.entry-data',
     storageEntry: 'entry',
@@ -17,23 +17,20 @@ var UIsetup = (function () {
   };
 
   return {
-    getDOMstrings: function () {
-      return DOMstrings;
-    },
+    getDOMstrings: () => DOMstrings,
   };
-
 })();
 
-var controller = (function () {
-  var DOM = UIsetup.getDOMstrings();
+const controller = (() => {
+  let DOM = UIsetup.getDOMstrings();
 
   /**
    * Set up event handling for adding items
    **/
-  var addItems = function () {
+  const addItems = () => {
 
     // Add text from input to list after Enter is pressed
-    $(document).on('keypress', function (event) {
+    $(document).on('keypress', event => {
       if (event.keyCode === 13 || event.which === 13) {
         if ($(DOM.inputName).val() !== '') {
           appendItem();
@@ -45,7 +42,7 @@ var controller = (function () {
     });
 
     // Add text from input to list after "+" button is pressed
-    $(DOM.button).on('click', function () {
+    $(DOM.button).on('click', () => {
       if ($(DOM.inputName).val() !== '') {
         appendItem();
         $(DOM.entrydata).contents().val('');
@@ -54,24 +51,23 @@ var controller = (function () {
       }
     });
 
-    // String to be appended to list
-    var appendItem = function () {
-      $(DOM.list).append('<li><span id=input-trash title=Delete></span>' +
-        '<div class=dropdown-container>' +
-        '<span id=input-name title=Details>' + $(DOM.inputName).val() + '</span>' +
-        '<div id=dropdown class=dropdown-content>' +
-        '<span id=input-location><u>Location:</u> ' +
-        $(DOM.inputLocation).val() + '</span>' + '<br/>' +
-        '<span id=input-length><u>Length:</u> ' +
-        $(DOM.inputLength).val() +
-        ' miles</span>' + '<br/>' +
-        '<span id=input-elevation><u>Elevation:</u> ' +
-        $(DOM.inputElevation).val() + ' ft.</span>' + '</div></div></li>');
+    // String to be appended to list(template literals ;))
+    const appendItem = () => {
+      $(DOM.list).append(`<li><span id=input-trash title=Delete></span>
+        <div class=dropdown-container><span id=input-name title=Details>
+          ${$(DOM.inputName).val()}</span>
+        <div id=dropdown class=dropdown-content>
+        <span id=input-location><u>Location:</u>
+          ${$(DOM.inputLocation).val()}</span><br/>
+        <span id=input-length><u>Length:</u>
+          ${$(DOM.inputLength).val()} miles</span><br/>
+        <span id=input-elevation><u>Elevation:</u>
+          ${$(DOM.inputElevation).val()} ft.</span></div></div></li>`);
     };
   };
 
   // Expand detail dropdown
-  var expandDropdown = function () {
+  const expandDropdown = () => {
     $(DOM.list).on('click', DOM.listedItem, function () {
       $(this).next().slideToggle(200);
     });
@@ -80,7 +76,7 @@ var controller = (function () {
   /**
    * Removing items off of list
    **/
-  var removeItems = function () {
+  const removeItems = () => {
     // Delete item off list
     $(DOM.list).on('click', DOM.trashIcon, function (event) {
       $(this).closest('li').remove();
@@ -90,28 +86,28 @@ var controller = (function () {
   /**
    * Handle local storage
    **/
-  var storageHandler = function () {
+  const storageHandler = () => {
     //Fetch stored data on page load
-    $(window).ready(function () {
+    $(window).ready(() => {
       $(UIsetup.getDOMstrings().list)
         .html(localStorage.getItem(UIsetup.getDOMstrings().storageEntry));
     });
 
     // Autosave entered data
-    setInterval(function () {
+    setInterval(() => {
       localStorage.setItem(UIsetup.getDOMstrings().storageEntry,
         $(UIsetup.getDOMstrings().list).html());
     }, 5000);
 
     // Save data on close
-    $(window).on('beforeunload', function () {
+    $(window).on('beforeunload', () => {
       localStorage.setItem(UIsetup.getDOMstrings().storageEntry,
         $(UIsetup.getDOMstrings().list).html());
     });
   };
 
   return {
-    init: function () {
+    init: () => {
       addItems();
       removeItems();
       expandDropdown();
