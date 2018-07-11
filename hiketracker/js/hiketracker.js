@@ -1,28 +1,26 @@
 /* global $ alert */
 
-const UIsetup = (() => {
-  const DOMstrings = {
-    list: '.item-list',
-    entrydata: '.entry-data',
-    storageEntry: 'entry',
-    button: '#add-btn',
-    inputName: 'input[name=hike-entry]',
-    inputLocation: 'input[name=location-entry]',
-    inputLength: 'input[name=length-entry]',
-    inputElevation: 'input[name=elevation-entry]',
-    trashIcon: '#input-trash',
-    listedItem: '#input-name',
-    dropdown: '#dropdown',
-    dropcontent: '.dropdown-content',
-  };
+//Store all DOM strings
+const DOMstrings = {
+  list: '.item-list',
+  entrydata: '.entry-data',
+  storageEntry: 'entry',
+  button: '#add-btn',
+  inputName: 'input[name=hike-entry]',
+  inputLocation: 'input[name=location-entry]',
+  inputLength: 'input[name=length-entry]',
+  inputElevation: 'input[name=elevation-entry]',
+  trashIcon: '#input-trash',
+  listedItem: '#input-name',
+  dropdown: '#dropdown',
+  dropcontent: '.dropdown-content',
+};
 
-  return {
-    getDOMstrings: () => DOMstrings,
-  };
-})();
-
+/**
+ * Main handler
+ **/
 const controller = (() => {
-  let DOM = UIsetup.getDOMstrings();
+  let DOM = DOMstrings;
 
   /**
    * Set up event handling for adding items
@@ -51,7 +49,9 @@ const controller = (() => {
       }
     });
 
-    // String to be appended to list(template literals ;))
+    /**
+     * Appends all strings to produce detail output
+     **/
     const appendItem = () => {
       $(DOM.list).append(`<li><span id=input-trash title=Delete></span>
         <div class=dropdown-container><span id=input-name title=Details>
@@ -66,7 +66,9 @@ const controller = (() => {
     };
   };
 
-  // Expand detail dropdown
+  /**
+   *Expand detail dropdown
+   **/
   const expandDropdown = () => {
     $(DOM.list).on('click', DOM.listedItem, function () {
       $(this).next().slideToggle(200);
@@ -116,8 +118,5 @@ const controller = (() => {
   };
 })();
 
+////START////
 controller.init();
-
-//localStorage.clear();
-
-//TODO: Firefox and IE not liking this
