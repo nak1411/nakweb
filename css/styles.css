@@ -1,7 +1,7 @@
 /***GENERAL***/
 
 * {
-  margin: 0;
+  margin-top: 0;
   padding: 0;
 }
 
@@ -23,10 +23,11 @@ body {
 /***TOP SECTION***/
 
 .header-inside {
+  margin: 0;
   display: -ms-grid;
   display: grid;
   margin: .4em;
-  grid-auto-rows: 60px;
+  grid-auto-rows: 3.75em;
   background: #525560;
   border: solid;
   border-color: #17171c;
@@ -42,7 +43,7 @@ body {
   -ms-grid-row: 1;
       grid-row: 1;
   text-align: right;
-  font-size: 42px;
+  font-size: 2.625em;
   color: #ff6600;
   text-shadow: 0 0 4px black;
 }
@@ -54,7 +55,7 @@ body {
   -ms-grid-row: 2;
       grid-row: 2;
   text-align: right;
-  font-size: 20px;
+  font-size: 1.25em;
 }
 
 .badges {
