@@ -1,7 +1,7 @@
 /***GENERAL***/
 
 * {
-  margin-top: 0;
+  margin: 0;
   padding: 0;
 }
 
@@ -28,9 +28,9 @@ body {
   display: grid;
   margin: .4em;
   grid-auto-rows: 3.75em;
-  background: #525560;
+  background: #3f4149;
   border: solid;
-  border-color: #17171c;
+  border-color: #0d0d0f;
   border-width: 3px;
   border-radius: 10px;
   box-shadow: 0 0 3px black;
@@ -63,25 +63,181 @@ body {
   margin: auto 2%;
 }
 
-#linkedin>img {
+.badges img {
   margin: 2% auto;
   margin-right: .5em;
   width: 2.5em;
   float: left;
+  transition: .2s;
 }
 
-#github>img {
-  margin: 2% auto;
-  margin-right: .5em;
-  width: 2.5em;
-  float: left;
+.badges img:hover {
+  -webkit-animation: shake-vertical 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+	        animation: shake-vertical 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
 }
 
-#gmail>img {
-  margin: 2% auto;
-  margin-right: .5em;
-  width: 2.5em;
-  float: left;
+@-webkit-keyframes shake-vertical {
+  0%,
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  10%,
+  30%,
+  50%,
+  70% {
+    -webkit-transform: translateY(-4px);
+            transform: translateY(-4px);
+  }
+  20%,
+  40%,
+  60% {
+    -webkit-transform: translateY(4px);
+            transform: translateY(4px);
+  }
+  80% {
+    -webkit-transform: translateY(3.2px);
+            transform: translateY(3.2px);
+  }
+  90% {
+    -webkit-transform: translateY(-3.2px);
+            transform: translateY(-3.2px);
+  }
+}
+@keyframes shake-vertical {
+  0%,
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  10%,
+  30%,
+  50%,
+  70% {
+    -webkit-transform: translateY(-4px);
+            transform: translateY(-4px);
+  }
+  20%,
+  40%,
+  60% {
+    -webkit-transform: translateY(4px);
+            transform: translateY(4px);
+  }
+  80% {
+    -webkit-transform: translateY(3.2px);
+            transform: translateY(3.2px);
+  }
+  90% {
+    -webkit-transform: translateY(-3.2px);
+            transform: translateY(-3.2px);
+  }
+}
+
+.navbar {
+  margin: 1em .4em;
+  background: #3f4149;
+  border: solid 3px;
+  border-radius: .5em;
+  border-color: #0d0d0f;
+  box-shadow: 0 0 3px #000;
+}
+
+.navbar .active-page {
+  color: #fff;
+}
+
+.navbar ul{
+  display: flex;
+  margin: 0 auto;
+  width: 50%;
+  align-items: center;
+  justify-content: space-between;
+  list-style-type: none;
+}
+
+.navbar li a {
+  color: #ff6600;
+  font-size: 1.2em;
+  text-decoration: none;
+}
+
+.navbar hr {
+  border-color: #fff;
+}
+
+.navbar li:hover {
+  color: #fff;
+  -webkit-animation: heartbeat 1.2s ease-in-out infinite both;
+	        animation: heartbeat 1.2s ease-in-out infinite both;
+}
+
+@-webkit-keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  10% {
+    -webkit-transform: scale(0.91);
+            transform: scale(0.91);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  17% {
+    -webkit-transform: scale(0.98);
+            transform: scale(0.98);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  33% {
+    -webkit-transform: scale(0.87);
+            transform: scale(0.87);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  45% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+}
+@keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  10% {
+    -webkit-transform: scale(0.91);
+            transform: scale(0.91);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  17% {
+    -webkit-transform: scale(0.98);
+            transform: scale(0.98);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  33% {
+    -webkit-transform: scale(0.87);
+            transform: scale(0.87);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  45% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
 }
 
 /***BOTTOM SECTION***/
@@ -119,7 +275,7 @@ body {
   margin: .4em;
   background: #27272c;
   border: solid;
-  border-color: #17171c;
+  border-color: #0d0d0f;
   border-width: 3px;
   border-radius: 10px;
   box-shadow: 0 0 3px black;
@@ -132,7 +288,7 @@ body {
   display: flex;
   background: #27272c;
   border: solid;
-  border-color: #17171c;
+  border-color: #0d0d0f;
   border-width: 3px;
   border-radius: 10px;
   box-shadow: 0 0 3px black;
@@ -312,15 +468,7 @@ footer {
     border-color: #17171c;
   }
 
-  #linkedin>img {
-    width: 1.4em;
-  }
-
-  #github>img {
-    width: 1.4em;
-  }
-
-  #gmail>img {
+  .badges img {
     width: 1.4em;
   }
 
@@ -373,15 +521,7 @@ footer {
     font-size: 0.625em;
   }
 
-  #linkedin>img {
-    width: 1.5em;
-  }
-
-  #github>img {
-    width: 1.5em;
-  }
-
-  #gmail>img {
+  .badges img {
     width: 1.5em;
   }
 
@@ -418,15 +558,8 @@ footer {
     grid-auto-rows: 1.25em;
   }
 
-  #linkedin>img {
+  .badges img {
     width: 1em;
   }
 
-  #github>img {
-    width: 1em;
-  }
-
-  #gmail>img {
-    width: 1em;
-  }
 }
