@@ -482,6 +482,10 @@ footer {
     line-height: 1em;
     font-size: .7em;
   }
+
+  .navbar li a {
+    font-size: 1em;
+  }
 }
 
 @media screen and (max-width: 400px) {
@@ -535,6 +539,10 @@ footer {
     line-height: 1.1em;
     font-size: .5em;
   }
+
+  .navbar li a {
+    font-size: .8em;
+  }
 }
 
 @media screen and (max-width: 275px) {
@@ -562,4 +570,7 @@ footer {
     width: 1em;
   }
 
+  .navbar li a {
+    font-size: .6em;
+  }
 }
