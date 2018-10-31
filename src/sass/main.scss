@@ -1,7 +1,10 @@
-@import 'utilities/all';
-@import 'themes/all';
-@import 'pages/all';
-@import 'layout/all';
-@import 'components/all';
 @import 'base/all';
+@import 'themes/all';
 @import 'vendor/all';
+@import 'utilities/all';
+
+.site {
+  @import 'pages/all';
+  @import 'layout/all';
+  @import 'components/all';
+}

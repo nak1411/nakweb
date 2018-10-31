@@ -14,7 +14,7 @@ const HardSourceWebpackPlugin = require('hard-source-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 // Update plugins as needed per project..ie.(moment.js)
-const pluginsProd = [new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/), new BundleAnalyzerPlugin(), new MiniCssExtractPlugin({
+const pluginsProd = [new BundleAnalyzerPlugin(), new MiniCssExtractPlugin({
   filename: 'main.css'
 }), new MinifyPlugin(), new OptimizeCSSAssetsPlugin(), new HtmlWebpackPlugin({
   template: 'src/index.html'
@@ -34,7 +34,7 @@ const devtool = isProd ? toolProd : toolDev;
 
 module.exports = {
   devtool: devtool,
-  entry: ['babel-polyfill', './src/js/Main.js'],
+  entry: ['babel-polyfill', './src/js/main.js'],
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js'
