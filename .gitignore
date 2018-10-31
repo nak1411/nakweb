@@ -1,5 +1,8 @@
-design-mockup-portfolio.pdf
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
 node_modules
 fontawesome-free-5.1.0-web
 favicon.ico
-blog

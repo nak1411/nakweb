@@ -1,0 +1,118 @@
+/***GENERAL***/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url("../img/tile.jpg");
+}
+
+.container {
+  margin: 1em auto;
+  width: 90%;
+  padding-top: 1em;
+  background-color: lavenderblush;
+  font-family: 'Bad Script', cursive;
+  -webkit-box-shadow: 0px 0px 4px 2px rgba(71, 71, 71, 1);
+  -moz-box-shadow: 0px 0px 4px 2px rgba(71, 71, 71, 1);
+  box-shadow: 0px 0px 10px 10px lavenderblush;
+}
+
+/***HEADER***/
+.carousel-caption>h1 {
+  font-size: 5em;
+}
+
+/***NAVBAR***/
+.nav-item {
+  padding-top: .3em;
+  padding-bottom: 0;
+  color: black;
+  font-size: 2em;
+}
+
+/***CONTENT***/
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: 1em;
+  padding-top: 1em;
+}
+
+/***FOOTER***/
+footer {
+  padding-top: 2em;
+  padding-bottom: .1em;
+}
+
+img {
+  -webkit-box-shadow: 0px 0px 4px 2px rgba(71, 71, 71, 1);
+  -moz-box-shadow: 0px 0px 4px 2px rgba(71, 71, 71, 1);
+  box-shadow: 0px 0px 5px 3px #c0c0c0;
+}
+
+#active-slide {
+  -webkit-box-shadow: 0px 0px 4px 2px rgba(71, 71, 71, 1);
+  -moz-box-shadow: 0px 0px 4px 2px rgba(71, 71, 71, 1);
+  box-shadow: 0px 0px 5px 3px #c0c0c0;
+}
+
+/***MEDIA QUERIES***/
+@media (min-width: 300px) {
+  .carousel-caption>h1 {
+    font-size: 2em;
+  }
+
+  .carousel-caption>h3 {
+    font-size: 1em;
+  }
+
+  .nav-item {
+    font-size: 2em;
+  }
+}
+
+@media (max-width: 415px) {
+  .nav-item {
+    font-size: 1em;
+  }
+
+  .content {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 576px) {
+  .carousel-caption>h1 {
+    font-size: 2.5em;
+  }
+
+  .carousel-caption>h3 {
+    font-size: 1em;
+  }
+
+}
+
+@media (min-width: 768px) {
+  .carousel-caption>h1 {
+    font-size: 3em;
+  }
+
+  .carousel-caption>h3 {
+    font-size: 1.2em;
+  }
+}
+
+@media (min-width: 992px) {
+  .carousel-caption>h1 {
+    font-size: 5em;
+  }
+}
+
+@media (min-width: 1200px) {
+  .carousel-caption>h1 {
+    font-size: 5em;
+  }
+}

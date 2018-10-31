@@ -1,0 +1,136 @@
+body {
+  background-color: #5F5F5F;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+}
+
+.header {
+  margin: 0;
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+  font-family: 'Luckiest Guy', cursive;
+  font-weight: 200;
+  font-size: 4em;
+}
+
+h2 {
+  margin: 0;
+  padding: 0;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 100;
+  font-size: 2em;
+}
+
+button {
+  background-color: #f44336;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 100;
+  font-size: 1.5em;
+  border-radius: 8px;
+  border: 2px solid black;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 8px 0 rgba(0, 0, 0, 0.19);
+}
+
+button:hover {
+  box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.2), 4px 4px 4px 4px rgba(0, 0, 0, 0.19);
+}
+
+button:active {
+  background-color: lightblue;
+  box-shadow: 0 5px #555;
+  transform: translateY(4px);
+}
+
+button:focus {
+  outline: 0;
+}
+
+#new-color {
+  align-content: left;
+}
+
+#difficulty {
+  align-content: right;
+}
+
+#result {
+  display: inline-block;
+  font-family: 'Oswald', sans-serif;
+  color: orange;
+  font-weight: 100;
+  font-size: 1.5em;
+  width: 40%;
+}
+
+.square {
+  width: 30%;
+  background: #29303B;
+  border-radius: 8px;
+  box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding-bottom: 30%;
+  float: left;
+  margin: 1.66%;
+}
+
+#gohome {
+  color: black;
+  text-decoration: none;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.5em;
+  font-weight: bolder;
+  border: dashed .08em;
+  border-radius: .15em;
+}
+
+@media screen and (max-width: 540px) {
+  h1 {
+    font-size: 3em;
+  }
+  button {
+    font-size: 1.2em;
+  }
+}
+
+@media screen and (max-width: 410px) {
+  h1 {
+    font-size: 2em;
+  }
+  h2 {
+    font-size: 1.2em;
+  }
+  button {
+    font-size: .8em;
+    border-radius: 4px;
+  }
+  #result {
+    font-size: 1.2em;
+  }
+  #gohome {
+    font-size: 1em;
+  }
+}
+  @media screen and (max-width: 310px) {
+    h1 {
+      font-size: 1.5em;
+    }
+    h2 {
+      font-size: 1em;
+    }
+    button {
+      font-size: .5em;
+      border-radius: 2px;
+    }
+    #result {
+      font-size: .9em;
+    }
+    #gohome {
+      font-size: .7em;
+    }
+  }
