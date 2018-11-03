@@ -1,0 +1,33 @@
+&__sectionhead {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-size: 4em;
+}
+
+&__projects {
+  padding: .8em;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  background: linear-gradient(45deg, color(primary) 20%, rgb(61, 69, 82) 100%);
+  box-shadow: inset 0 0 10px 8px rgba(0, 0, 0, 0.233);
+}
+
+&__bio {
+  padding: .8em;
+  background: linear-gradient(45deg, color(primary) 20%, rgb(61, 69, 82) 100%);
+  box-shadow: inset 0 0 10px 8px rgba(0, 0, 0, 0.233);
+}
+
+&__history {
+  padding: .8em;
+  background: linear-gradient(45deg, color(primary) 20%, rgb(61, 69, 82) 100%);
+  box-shadow: inset 0 0 10px 8px rgba(0, 0, 0, 0.233);
+}
+
+&__education {
+  padding: .8em;
+  background: linear-gradient(45deg, color(primary) 20%, rgb(61, 69, 82) 100%);
+  box-shadow: inset 0 0 10px 8px rgba(0, 0, 0, 0.233);
+}

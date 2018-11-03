@@ -1,0 +1,18 @@
+&__navigation {
+  padding: .5em;
+  text-align: right;
+  color: color(secondary);
+  font-weight: $navFontWeight;
+  font-size: $navFontSize;
+}
+
+&__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+&__item {
+  display: inline-block;
+  padding-right: $navPadding;
+}
