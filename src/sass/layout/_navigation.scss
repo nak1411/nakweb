@@ -1,6 +1,5 @@
 &__navigation {
-  padding: .5em;
-  text-align: right;
+  position: fixed;
   color: color(secondary);
   font-weight: $navFontWeight;
   font-size: $navFontSize;
@@ -14,5 +13,11 @@
 
 &__item {
   display: inline-block;
+  padding-right: $navPadding;
+}
+
+&__item--logo {
+  float: left;
+  padding-left: $navPadding;
   padding-right: $navPadding;
 }
