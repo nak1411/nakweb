@@ -1,5 +1,7 @@
 &__navigation {
   position: fixed;
+  width: calc(100vw - (100vw - 100%));
+  text-align: left;
   color: color(secondary);
   font-weight: $navFontWeight;
   font-size: $navFontSize;
@@ -7,17 +9,10 @@
 
 &__list {
   margin: 0;
-  padding: 0;
   list-style: none;
 }
 
 &__item {
   display: inline-block;
-  padding-right: $navPadding;
-}
-
-&__item--logo {
-  float: left;
-  padding-left: $navPadding;
   padding-right: $navPadding;
 }

@@ -1,74 +1,93 @@
 &__sectionhead {
-  position: relative;
-  top: .4em;
   margin: 0;
-  padding: 0;
   text-align: center;
-  line-height: 0;
-  font-size: 3em;
+}
+
+&__sectionhead--skills {
+  margin: 0;
+  text-align: left;
+  font-family: $fontSecondary;
+}
+
+&__sectionfoot--skills {
+  margin: 0;
+  text-align: left;
+  font-family: $fontSecondary;
+}
+
+&__sectionhead--background {
+  margin: 0;
+  text-align: center;
+  background-color: rgb(50, 50, 50);
 }
 
 &__projects {
-  width: calc(100vw - (100vw - 100%));
-  height: 50em;
-  background: linear-gradient(0deg, rgb(17, 17, 17) 20%, color(primaryBackground) 100%);
+  margin-bottom: 5em;
+  margin-left: 5em;
+  margin-right: 5em;
+  outline: 2px rgb(110, 110, 110) solid;
+  background-color: #000;
+}
+
+&__bio {
+  margin-bottom: 5em;
+  margin-left: 20em;
+  margin-right: 20em;
+  outline: 2px rgb(110, 110, 110) solid;
+  background-color: #000;
+}
+
+&__experience {
+  margin-bottom: 5em;
+  margin-left: 5em;
+  float: left;
+  outline: 2px rgb(110, 110, 110) solid;
+  background-color: #000;
+}
+
+&__education {
+  margin-bottom: 5em;
+  margin-right: 5em;
+  float: right;
+  outline: 2px rgb(110, 110, 110) solid;
+  background-color: #000;
+}
+
+&__container--multi {
+  padding: 1em;
   display: grid;
-  grid-template-columns: 25.5em 25.5em 25.5em;
-  grid-template-rows: 20em 20em;
-  grid-gap: .5em;
+  grid-template-columns: 20em 20em 20em;
+  justify-content: center;
+  align-content: center;
+}
+
+&__container--single {
+  display: inline-block;
+  padding: 1em;
+  display: grid;
+  grid-template-columns: 50em;
   justify-content: center;
   align-content: center;
 }
 
 &__app {
-  align-self: center;
   justify-self: center;
-  width: 100%;
-  height: 100%;
-  border: 2px white solid;
-}
-
-&__bio {
-  width: calc(100vw - (100vw - 100%));
-  height: 50em;
-  background: linear-gradient(0deg, rgb(22, 16, 16) 20%, rgb(17, 17, 17) 100%);
-  display: grid;
-  grid-template-columns: 30em 30em;
-  grid-template-rows: 40em;
-  grid-gap: 5em;
-  justify-content: center;
-  align-content: center;
+  align-self: center;
+  width: 20em;
 }
 
 &__about {
-  margin: 0;
   justify-self: center;
   align-self: center;
-  width: 100%;
-  height: 100%;
-  border: 2px white solid;
+  outline: 2px white solid;
 }
 
 &__toolset {
-  margin: 0;
-  padding: 0;
+  margin: 1em;
   list-style: none;
-  text-align: center;
-  width: 100%;
-  height: 100%;
-  border: 2px white solid;
-}
-
-&__experience {
-  width: calc(100vw - (100vw - 100%));
-  height: 30em;
-  display: grid;
-  grid-template-columns: 50em;
-  grid-template-rows: auto;
-  grid-gap: 1em;
-  background: linear-gradient(0deg, rgb(4, 13, 15) 20%, rgb(22, 16, 16) 100%);
-  justify-content: center;
-  align-content: center;
+  text-align: left;
+  font-family: $fontSecondary;
+  font-size: 1.3em;
 }
 
 &__job {
@@ -96,23 +115,10 @@
   text-align: center;
 }
 
-
 &__description {
   margin: 0;
   text-align: center;
   font-size: 1.2em;
-}
-
-&__education {
-  width: calc(100vw - (100vw - 100%));
-  height: 40em;
-  display: grid;
-  grid-template-columns: 50em;
-  grid-template-rows: auto;
-  grid-gap: 1em;
-  background: linear-gradient(0deg, rgb(11, 30, 34) 20%, rgb(4, 13, 15) 100%);
-  justify-content: center;
-  align-content: center;
 }
 
 &__class {
