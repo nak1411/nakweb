@@ -1,0 +1,29 @@
+&__skills {
+  margin-bottom: 5em;
+  margin-left: 5em;
+  width: 30em;
+  float: left;
+  clear: both;
+  outline: 2px rgb(110, 110, 110) solid;
+  background-color: #000;
+}
+
+&__skillset {
+  margin: 1em;
+  list-style: none;
+  text-align: left;
+  font-family: $fontSecondary;
+  font-size: 1.3em;
+}
+
+&__skillhead {
+  margin: 0;
+  text-align: left;
+  font-family: $fontSecondary;
+}
+
+&__skillfoot {
+  margin: 0;
+  text-align: left;
+  font-family: $fontSecondary;
+}

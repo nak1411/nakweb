@@ -1,112 +1,7 @@
-&__sectionhead {
-  margin: 0;
-  text-align: center;
-}
-
-&__sectionhead--skills {
-  margin: 0;
-  text-align: left;
-  font-family: $fontSecondary;
-}
-
-&__sectionfoot--skills {
-  margin: 0;
-  text-align: left;
-  font-family: $fontSecondary;
-}
-
 &__sectionhead--background {
   margin: 0;
   text-align: center;
   background-color: rgb(50, 50, 50);
-}
-
-&__projects {
-  margin-bottom: 5em;
-  margin-left: 5em;
-  margin-right: 5em;
-  outline: 2px rgb(110, 110, 110) solid;
-  background-color: #000;
-}
-
-&__bio {
-  margin-bottom: 5em;
-  margin-left: 20em;
-  margin-right: 20em;
-  outline: 2px rgb(110, 110, 110) solid;
-  background-color: #000;
-}
-
-&__experience {
-  margin-bottom: 5em;
-  margin-left: 5em;
-  float: left;
-  outline: 2px rgb(110, 110, 110) solid;
-  background-color: #000;
-}
-
-&__education {
-  margin-bottom: 5em;
-  margin-right: 5em;
-  float: right;
-  outline: 2px rgb(110, 110, 110) solid;
-  background-color: #000;
-}
-
-&__container--multi {
-  padding: 1em;
-  display: grid;
-  grid-template-columns: 20em 20em 20em;
-  justify-content: center;
-  align-content: center;
-}
-
-&__container--single {
-  display: inline-block;
-  padding: 1em;
-  display: grid;
-  grid-template-columns: 50em;
-  justify-content: center;
-  align-content: center;
-}
-
-&__app {
-  justify-self: center;
-  align-self: center;
-  width: 20em;
-}
-
-&__about {
-  justify-self: center;
-  align-self: center;
-  outline: 2px white solid;
-}
-
-&__toolset {
-  margin: 1em;
-  list-style: none;
-  text-align: left;
-  font-family: $fontSecondary;
-  font-size: 1.3em;
-}
-
-&__job {
-  padding-bottom: 1em;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto;
-  align-content: center;
-  justify-content: center;
-  border-bottom: 2px rgb(134, 134, 134) solid;
-}
-
-&__job:last-of-type {
-  border-bottom: 0;
-}
-
-&__who--date {
-  display: block;
-  font-size: .6em;
 }
 
 &__who {
@@ -115,22 +10,13 @@
   text-align: center;
 }
 
+&__who--date {
+  display: block;
+  font-size: .6em;
+}
+
 &__description {
   margin: 0;
   text-align: center;
   font-size: 1.2em;
-}
-
-&__class {
-  padding-bottom: 1em;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto;
-  align-content: center;
-  justify-content: center;
-  border-bottom: 2px rgb(134, 134, 134) solid;
-}
-
-&__class:last-of-type {
-  border-bottom: 0;
 }
