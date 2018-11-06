@@ -20,3 +20,31 @@
   text-align: center;
   font-size: 1.2em;
 }
+
+&__color--purple{
+  color: rgb(152, 101, 199);
+}
+
+&__color--blue{
+  color: rgb(90, 109, 163);
+}
+
+&__color--green{
+  color: rgb(108, 170, 90);
+}
+
+&__caret {
+  animation: blink-caret 1s step-end infinite;
+}
+
+@keyframes blink-caret {
+
+  from,
+  to {
+    color: transparent
+  }
+
+  50% {
+    color: rgb(182, 106, 7);
+  }
+}
