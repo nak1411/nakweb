@@ -1,15 +1,21 @@
-&__footer {
+&__badges {
   display: flex;
   justify-content: center;
   align-content: center;
   width: calc(100vw - (100vw - 100%));
-  height: 5em;
+  line-height: 5em;
   text-align: center;
-  background: #000;
+  background: rgb(40, 40, 40);
 }
 
 &__badge {
-  padding-right: 2em;
+  vertical-align: middle;
+  margin: auto 1em;
   width: 3em;
   height: 3em;
+}
+
+&__trade{
+  margin: 0;
+  text-align: center;
 }
