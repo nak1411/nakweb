@@ -50,7 +50,7 @@
 
             <section class="site__skills">
                 <div class="site__sectionhead">
-                    <h2 class="site__sectionhead--background">skills.html</h2>
+                    <h2 class="site__sectionhead--background">skills.js</h2>
                     <button class="site__sectionhead--minimize">-</button>
                 </div>
                 <h2 class="site__skillhead"><span class="site__color--purple">let</span> <span class="site__color--blue">skills</span>
@@ -100,16 +100,35 @@
                     <p class="site__description site__color--green">`Courses taken:<br>-The Complete JavaScript Course
                         2018<br>-Build
                         Responsive Real World Websites with HTML5 and CSS3<br>-The Web Developer Bootcamp`</p>
-                        <span class="site__caret">|</span>
+                    <span class="site__caret">|</span>
                 </div>
+            </section>
+
+            <section class="site__contact">
+                <div class="site__sectionhead">
+                    <h2 class="site__sectionhead--background">contact.html</h2>
+                    <button class="site__sectionhead--minimize">-</button>
+                </div>
+                <span class="site__caret">&nbsp;█</span>
+                <form class="site__form" action="email-handler.php" method="post">
+                    <h2 class="site__skillset site__color--grey">// GET_AT_ME</h3>
+                        <fieldset class="site__inputset">
+                            <input class="site__input" name="name" placeholder="_NAME" type="text" tabindex="1" required autofocus>
+                            <input class="site__input" name="email" placeholder="_EMAIL" type="email" tabindex="2" required>
+                            <input class="site__input" name="phone" placeholder="_PHONE" type="tel" tabindex="3" required>
+                            <textarea class="site__textarea" name="message" placeholder="LEAVE_YOUR_MESSAGE_HERE..." type="text"
+                                tabindex="4"></textarea>
+                            <button class="site__submit" type="submit" data-submit="...SENDING">SUBMIT</button>
+                        </fieldset>
+                </form>
             </section>
         </main>
 
         <!--FOOTER-------------------------------------------------------------->
         <footer class="site__footer">
-            <img class="site__badge" src="img/linkedin-square-white.png" alt="linked in link">
-            <img class="site__badge" src="img/github-square-white.png" alt="github link">
-            <img class="site__badge" src="img/envelope-square-white.png" alt="email link">
+            <a href="https://www.linkedin.com/in/justinschlump/"><img class="site__badge" src="img/linkedin-square-white.png"
+                    alt="linked in link"></a>
+            <a href="https://github.com/nak1411"><img class="site__badge" src="img/github-square-white.png" alt="github link"></a>
         </footer>
     </div>
 </body>
