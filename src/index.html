@@ -13,15 +13,6 @@
 <body>
     <div class="site">
 
-        <!--NAVIGATION---------------------------------------------------------->
-        <nav class="site__navigation">
-            <ul class="site__list">
-                <li class="site__item">About</li>
-                <li class="site__item">Projects</li>
-                <li class="site__item">Contact</li>
-            </ul>
-        </nav>
-
         <!--HEADER-------------------------------------------------------------->
         <header class="site__header">
             <div class="site__intro">
@@ -29,7 +20,13 @@
                 <h1 class="site__fullname">JUSTIN_SCHLUMP</h1>
                 <h2 class="site__title">Front.end.developer()</h2>
                 <h3 class="site__location">./Washington/Seattle</h3>
+                <div class="site__introbadges">
+                    <a href="https://www.linkedin.com/in/justinschlump/"><img class="site__badge" src="img/linkedin-square-white.png"
+                            alt="linked in link"></a>
+                    <a href="https://github.com/nak1411"><img class="site__badge" src="img/github-square-white.png" alt="github link"></a>
+                </div>
             </div>
+
         </header>
 
         <!--CONTENT------------------------------------------------------------->
@@ -42,9 +39,27 @@
                 </div>
                 <span class="site__caret">&nbsp;█</span>
                 <div class="site__grid--multi">
-                    <img class="site__app" src="img/weather_thumb.jpg" alt="">
-                    <img class="site__app" src="img/breakout_thumb.jpg" alt="">
-                    <img class="site__app" src="img/matcher_thumb.jpg" alt="">
+                    <div class="site__app">
+                        <img class="site__appimg" src="img/weather_thumb.jpg" alt="">
+                        <div class="site__overlay">
+                            <h2 class="site__overlay--title site__color--purple">NakWeather</h2>
+                            <p class="site__overlay--desc site__color--green">Real time weather app using multiple APIs</p>
+                        </div>
+                    </div>
+                    <div class="site__app">
+                        <img class="site__appimg" src="img/breakout_thumb.jpg" alt="">
+                        <div class="site__overlay">
+                            <h2 class="site__overlay--title site__color--purple">NakBreak</h2>
+                            <p class="site__overlay--desc site__color--green">Breakout clone app</p>
+                        </div>
+                    </div>
+                    <div class="site__app">
+                        <img class="site__appimg" src="img/matcher_thumb.jpg" alt="">
+                        <div class="site__overlay">
+                            <h2 class="site__overlay--title site__color--purple">ColorMatcher</h2>
+                            <p class="site__overlay--desc site__color--green">RGB matching app with difficulty levels</p>
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -113,11 +128,14 @@
                 <form class="site__form" action="email-handler.php" method="post">
                     <h2 class="site__skillset site__color--grey">// GET_AT_ME</h3>
                         <fieldset class="site__inputset">
-                            <input class="site__input" name="name" placeholder="_NAME" type="text" tabindex="1" required autofocus>
-                            <input class="site__input" name="email" placeholder="_EMAIL" type="email" tabindex="2" required>
-                            <input class="site__input" name="phone" placeholder="_PHONE" type="tel" tabindex="3" required>
-                            <textarea class="site__textarea" name="message" placeholder="LEAVE_YOUR_MESSAGE_HERE..." type="text"
-                                tabindex="4"></textarea>
+                            <input class="site__input" name="name" placeholder="_NAME" type="text" tabindex="1"
+                                required autofocus>
+                            <input class="site__input" name="email" placeholder="_EMAIL" type="email" tabindex="2"
+                                required>
+                            <input class="site__input" name="phone" placeholder="_PHONE" type="tel" tabindex="3"
+                                required>
+                            <textarea class="site__textarea" name="message" placeholder="LEAVE_YOUR_MESSAGE_HERE..."
+                                type="text" tabindex="4"></textarea>
                             <button class="site__submit" type="submit" data-submit="...SENDING">SUBMIT</button>
                         </fieldset>
                 </form>
