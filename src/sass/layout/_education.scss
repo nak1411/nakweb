@@ -3,20 +3,26 @@
   margin-right: 5em;
   width: 35em;
   float: right;
-  clear: both;
   outline: 2px rgb(110, 110, 110) solid;
   box-shadow: 15px 15px 10px 2px rgba(0,0,0,0.62);
   background-color: #000;
+  font-family: $fontSecondary;
 }
 
 &__class {
+  margin: 1em;
   padding-bottom: 1em;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
   align-content: center;
   justify-content: center;
-  border-bottom: 2px rgb(134, 134, 134) solid;
+  border-bottom: 2px rgb(134, 134, 134) dashed;
+}
+
+&__description{
+  margin: 1em;
+  text-align: justify;
 }
 
 &__class:last-of-type {

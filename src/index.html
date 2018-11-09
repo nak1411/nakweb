@@ -36,7 +36,11 @@
         <main class="site__content">
 
             <section class="site__projects">
-                <h2 class="site__sectionhead--background">projects.exe</h2>
+                <div class="site__sectionhead">
+                    <h2 class="site__sectionhead--background">projects.exe</h2>
+                    <button class="site__sectionhead--minimize">-</button>
+                </div>
+                <span class="site__caret">&nbsp;█</span>
                 <div class="site__grid--multi">
                     <img class="site__app" src="img/weather_thumb.jpg" alt="">
                     <img class="site__app" src="img/breakout_thumb.jpg" alt="">
@@ -45,8 +49,12 @@
             </section>
 
             <section class="site__skills">
-                <h2 class="site__sectionhead--background">skills.html</h2>
-                <h2 class="site__skillhead"><span class="site__color--purple">let</span> <span class="site__color--blue">skills</span> = {</h2>
+                <div class="site__sectionhead">
+                    <h2 class="site__sectionhead--background">skills.html</h2>
+                    <button class="site__sectionhead--minimize">-</button>
+                </div>
+                <h2 class="site__skillhead"><span class="site__color--purple">let</span> <span class="site__color--blue">skills</span>
+                    = {</h2>
                 <ul class="site__skillset site__color--green">
                     <li class="site__skill">'JavaScript'</li>
                     <li class="site__skill">'HTML'</li>
@@ -59,7 +67,7 @@
                 <h2 class="site__skillfoot">}<span class="site__caret">|</span></h2>
             </section>
 
-            <section class="site__experience">
+            <!-- <section class="site__experience">
                 <h2 class="site__sectionhead--background">experience.scss</h2>
                 <div class="site__job">
                     <h3 class="site__who">Iron Belly Studios<span class="site__who--date">2016-2017</span></h3>
@@ -70,23 +78,29 @@
                     <p class="site__description">Created and deployed website for a local welding/fabricating
                         business.</p>
                 </div>
-            </section>
+            </section> -->
 
             <section class="site__education">
-                <h2 class="site__sectionhead--background">education.js</h2>
-                <div class="site__class">
-                    <h3 class="site__who">Lake Washington Technical College<span class="site__who--date">September
-                            2011-2016</span></h3>
-                    <p class="site__description">Took classes such as Technical Writing, C++, JavaScript and
-                        programming
-                        fundamentals along with multiple web development courses. Created projects
-                        demonstrating knowledge of HTML, CSS, JavaScript, version control and API
-                        handling.</p>
+                <div class="site__sectionhead">
+                    <h2 class="site__sectionhead--background">education.js</h2>
+                    <button class="site__sectionhead--minimize">-</button>
                 </div>
                 <div class="site__class">
-                    <h3 class="site__who">Udemy Online Courses<span class="site__who--date">September 2017-2018</span></h3>
-                    <p class="site__description">Courses taken:<br>'The Complete JavaScript Course 2018'<br>'Build
-                        Responsive Real World Websites with HTML5 and CSS3'<br>'The Web Developer Bootcamp'</p>
+                    <h3 class="site__who site__color--grey">/*Lake Washington Technical College*/<span class="site__who--date">September
+                            2011-2016</span></h3>
+                    <p class="site__description site__color--green">`Took classes such as Technical Writing, C++,
+                        JavaScript and
+                        programming fundamentals along with multiple web development courses. Created projects
+                        demonstrating knowledge of HTML, CSS, JavaScript, version control and API
+                        handling.`</p>
+                </div>
+                <div class="site__class">
+                    <h3 class="site__who site__color--grey">/*Udemy Online Courses*/<span class="site__who--date">September
+                            2017-2018</span></h3>
+                    <p class="site__description site__color--green">`Courses taken:<br>-The Complete JavaScript Course
+                        2018<br>-Build
+                        Responsive Real World Websites with HTML5 and CSS3<br>-The Web Developer Bootcamp`</p>
+                        <span class="site__caret">|</span>
                 </div>
             </section>
         </main>

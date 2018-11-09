@@ -1,7 +1,20 @@
+&__sectionhead {
+  display: flex;
+}
+
 &__sectionhead--background {
   margin: 0;
+  width: 100%;
+  line-height: 1.5em;
   text-align: center;
   background-color: rgb(50, 50, 50);
+}
+
+&__sectionhead--minimize {
+  margin: 0;
+  padding: 0;
+  width: 3em;
+  float: right;
 }
 
 &__who {
@@ -21,16 +34,20 @@
   font-size: 1.2em;
 }
 
-&__color--purple{
+&__color--purple {
   color: rgb(152, 101, 199);
 }
 
-&__color--blue{
+&__color--blue {
   color: rgb(90, 109, 163);
 }
 
-&__color--green{
+&__color--green {
   color: rgb(108, 170, 90);
+}
+
+&__color--grey {
+  color: rgb(121, 121, 121);
 }
 
 &__caret {
