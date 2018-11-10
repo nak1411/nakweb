@@ -5,11 +5,27 @@
  */
 
 import '../sass/main.scss';
+require('jquery');
+require('jquery-ui-bundle');
 
 let APP = (function () {
 
   const init = () => {
-    console.log('Hello World');
+    $(".draggable").draggable({
+      snap: true,
+      containment: "document"
+    });
+
+    let prev = false;
+    $(".draggable").click(function () {
+      $(this).css("position", "relative");
+      if (prev) {
+        prev.style.zIndex = 1;
+      }
+      this.style.zIndex = 1000;
+      prev = this;
+
+    });
   }
   return {
     init: init
