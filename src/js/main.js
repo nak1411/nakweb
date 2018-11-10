@@ -24,7 +24,6 @@ let APP = (function () {
       }
       this.style.zIndex = 1000;
       prev = this;
-
     });
   }
   return {
