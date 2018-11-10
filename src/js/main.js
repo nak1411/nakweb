@@ -14,11 +14,21 @@ let APP = (function () {
   let context;
   let particles = [];
   let maxP = 5000
+  let mouseX;
+  let mouseY;
+
+  let fps = 30;
+  let now;
+  let then = Date.now();
+  let interval = 1000 / fps;
+  let delta;
 
   /**
    * Initialize Stuff
    */
   const init = () => {
+
+
     // Set up canvas
     canvas = document.querySelector('.site__canvas');
     context = canvas.getContext('2d');
@@ -64,8 +74,15 @@ let APP = (function () {
   const run = () => {
     if (running) {
       requestAnimationFrame(run);
-      render();
+      now = Date.now();
+      delta = now - then;
+      if (delta > interval) {
+        then = now - (delta % interval);
+        render();
+      }
+      
     }
+    
   }
 
   /**
@@ -77,8 +94,8 @@ let APP = (function () {
     context.fillRect(0, 0, canvas.width, canvas.height);
 
     for (const particle of particles) {
-      context.fillStyle = '#222';
-      context.fillRect(particle.x, particle.y, 2, 2);
+      context.fillStyle = `rgba(${Math.random() * 100}, 50,  ${Math.random() * 150}, ${particle.brightness})`;
+      context.fillRect(particle.x, particle.y, particle.width, particle.height);
     }
   }
 
@@ -86,6 +103,9 @@ let APP = (function () {
     constructor(screenWidth, screenHeight) {
       this.x = Math.floor(Math.random() * screenWidth);
       this.y = Math.floor(Math.random() * screenHeight);
+      this.width = 2;
+      this.height = 2;
+      this.brightness = Math.random();
     }
   }
   return {
