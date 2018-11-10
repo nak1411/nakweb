@@ -10,78 +10,77 @@
     <title>NakDev | Justin Schlump</title>
 </head>
 
-<body>
-    <div class="site">
 
-        <!--HEADER-------------------------------------------------------------->
-        <header class="site__header">
-            <div class="site__intro">
-                <img class="site__image--profile" src="img/me.jpg" alt="">
-                <h1 class="site__fullname">JUSTIN_SCHLUMP</h1>
-                <h2 class="site__title">Front.end.developer()</h2>
-                <h3 class="site__location">./Washington/Seattle</h3>
-                <div class="site__introbadges">
-                    <a href="https://www.linkedin.com/in/justinschlump/" target="_blank"><img class="site__badge" src="img/linkedin-square-white.png"
-                            alt="linked in link"></a>
-                    <a href="https://github.com/nak1411" target="_blank"><img class="site__badge" src="img/github-square-white.png"
-                            alt="github link"></a>
+<body class="site">
+
+    <!--HEADER-------------------------------------------------------------->
+    <header class="site__header">
+        <div class="site__intro">
+            <img class="site__image--profile" src="img/me.jpg" alt="">
+            <h1 class="site__fullname">JUSTIN_SCHLUMP</h1>
+            <h2 class="site__title">Front.end.developer()</h2>
+            <h3 class="site__location">./Washington/Seattle</h3>
+            <div class="site__introbadges">
+                <a href="https://www.linkedin.com/in/justinschlump/" target="_blank"><img class="site__badge" src="img/linkedin-square-white.png"
+                        alt="linked in link"></a>
+                <a href="https://github.com/nak1411" target="_blank"><img class="site__badge" src="img/github-square-white.png"
+                        alt="github link"></a>
+            </div>
+        </div>
+    </header>
+
+    <!--CONTENT------------------------------------------------------------->
+    <main class="site__content">
+        <canvas class="site__canvas"></canvas>
+        <section class="site__projects draggable">
+            <div class="site__sectionhead">
+                <h2 class="site__sectionhead--background">projects.exe</h2>
+            </div>
+            <span class="site__caret">&nbsp;█</span>
+            <div class="site__grid--multi">
+                <div class="site__app">
+                    <img class="site__appimg" src="img/weather_thumb.jpg" alt="">
+                    <div class="site__overlay">
+                        <h2 class="site__overlay--title site__color--purple">NakWeather</h2>
+                        <p class="site__overlay--desc site__color--green">Real time weather app using multiple APIs</p>
+                    </div>
+                </div>
+                <div class="site__app">
+                    <img class="site__appimg" src="img/breakout_thumb.jpg" alt="">
+                    <div class="site__overlay">
+                        <h2 class="site__overlay--title site__color--purple">NakBreak</h2>
+                        <p class="site__overlay--desc site__color--green">Breakout clone app</p>
+                    </div>
+                </div>
+                <div class="site__app">
+                    <img class="site__appimg" src="img/matcher_thumb.jpg" alt="">
+                    <div class="site__overlay">
+                        <h2 class="site__overlay--title site__color--purple">ColorMatcher</h2>
+                        <p class="site__overlay--desc site__color--green">RGB matching app with difficulty levels</p>
+                    </div>
                 </div>
             </div>
+        </section>
 
-        </header>
+        <section class="site__skills draggable">
+            <div class="site__sectionhead">
+                <h2 class="site__sectionhead--background">skills.js</h2>
+            </div>
+            <h2 class="site__skillhead"><span class="site__color--purple">let</span> <span class="site__color--blue">skills</span>
+                = {</h2>
+            <ul class="site__skillset site__color--green">
+                <li class="site__skill">'JavaScript'</li>
+                <li class="site__skill">'HTML'</li>
+                <li class="site__skill">'CSS'</li>
+                <li class="site__skill">'SASS'</li>
+                <li class="site__skill">'GIT'</li>
+                <li class="site__skill">'Webpack'</li>
+                <li class="site__skill">'Ajax'</li>
+            </ul>
+            <h2 class="site__skillfoot">}<span class="site__caret">|</span></h2>
+        </section>
 
-        <!--CONTENT------------------------------------------------------------->
-        <main class="site__content">
-
-            <section class="site__projects draggable">
-                <div class="site__sectionhead">
-                    <h2 class="site__sectionhead--background">projects.exe</h2>
-                </div>
-                <span class="site__caret">&nbsp;█</span>
-                <div class="site__grid--multi">
-                    <div class="site__app">
-                        <img class="site__appimg" src="img/weather_thumb.jpg" alt="">
-                        <div class="site__overlay">
-                            <h2 class="site__overlay--title site__color--purple">NakWeather</h2>
-                            <p class="site__overlay--desc site__color--green">Real time weather app using multiple APIs</p>
-                        </div>
-                    </div>
-                    <div class="site__app">
-                        <img class="site__appimg" src="img/breakout_thumb.jpg" alt="">
-                        <div class="site__overlay">
-                            <h2 class="site__overlay--title site__color--purple">NakBreak</h2>
-                            <p class="site__overlay--desc site__color--green">Breakout clone app</p>
-                        </div>
-                    </div>
-                    <div class="site__app">
-                        <img class="site__appimg" src="img/matcher_thumb.jpg" alt="">
-                        <div class="site__overlay">
-                            <h2 class="site__overlay--title site__color--purple">ColorMatcher</h2>
-                            <p class="site__overlay--desc site__color--green">RGB matching app with difficulty levels</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="site__skills draggable">
-                <div class="site__sectionhead">
-                    <h2 class="site__sectionhead--background">skills.js</h2>
-                </div>
-                <h2 class="site__skillhead"><span class="site__color--purple">let</span> <span class="site__color--blue">skills</span>
-                    = {</h2>
-                <ul class="site__skillset site__color--green">
-                    <li class="site__skill">'JavaScript'</li>
-                    <li class="site__skill">'HTML'</li>
-                    <li class="site__skill">'CSS'</li>
-                    <li class="site__skill">'SASS'</li>
-                    <li class="site__skill">'GIT'</li>
-                    <li class="site__skill">'Webpack'</li>
-                    <li class="site__skill">'Ajax'</li>
-                </ul>
-                <h2 class="site__skillfoot">}<span class="site__caret">|</span></h2>
-            </section>
-
-            <!-- <section class="site__experience">
+        <!-- <section class="site__experience">
                 <h2 class="site__sectionhead--background">experience.scss</h2>
                 <div class="site__job">
                     <h3 class="site__who">Iron Belly Studios<span class="site__who--date">2016-2017</span></h3>
@@ -94,62 +93,57 @@
                 </div>
             </section> -->
 
-            <section class="site__education draggable">
-                <div class="site__sectionhead">
-                    <h2 class="site__sectionhead--background">education.js</h2>
-                </div>
-                <div class="site__class">
-                    <h3 class="site__who site__color--grey">/*Lake Washington Technical College*/<span class="site__who--date">September
-                            2011-2016</span></h3>
-                    <p class="site__description site__color--green">`Took classes such as Technical Writing, C++,
-                        JavaScript and
-                        programming fundamentals along with multiple web development courses. Created projects
-                        demonstrating knowledge of HTML, CSS, JavaScript, version control and API
-                        handling.`</p>
-                </div>
-                <div class="site__class">
-                    <h3 class="site__who site__color--grey">/*Udemy Online Courses*/<span class="site__who--date">September
-                            2017-2018</span></h3>
-                    <p class="site__description site__color--green">`Courses taken:<br>-The Complete JavaScript Course
-                        2018<br>-Build
-                        Responsive Real World Websites with HTML5 and CSS3<br>-The Web Developer Bootcamp`</p>
-                    <span class="site__caret">|</span>
-                </div>
-            </section>
-
-            <section class="site__contact draggable">
-                <div class="site__sectionhead">
-                    <h2 class="site__sectionhead--background">contact.html</h2>
-                </div>
-                <span class="site__caret">&nbsp;█</span>
-                <form class="site__form" action="email-handler.php" method="post">
-                    <h2 class="site__skillset site__color--grey">// GET_AT_ME</h3>
-                        <fieldset class="site__inputset">
-                            <input class="site__input" name="name" placeholder="_NAME" type="text" tabindex="1"
-                                required autofocus>
-                            <input class="site__input" name="email" placeholder="_EMAIL" type="email" tabindex="2"
-                                required>
-                            <input class="site__input" name="phone" placeholder="_PHONE" type="tel" tabindex="3"
-                                required>
-                            <textarea class="site__textarea" name="message" placeholder="LEAVE_YOUR_MESSAGE_HERE..."
-                                type="text" tabindex="4"></textarea>
-                            <button class="site__submit" type="submit" data-submit="...SENDING">SUBMIT</button>
-                        </fieldset>
-                </form>
-            </section>
-        </main>
-
-        <!--FOOTER-------------------------------------------------------------->
-        <footer class="site__footer">
-            <div class="site__badges">
-                <a href="https://www.linkedin.com/in/justinschlump/" target="_blank"><img class="site__badge" src="img/linkedin-square-white.png"
-                        alt="linked in link"></a>
-                <a href="https://github.com/nak1411" target="_blank"><img class="site__badge" src="img/github-square-white.png"
-                        alt="github link"></a>
+        <section class="site__education draggable">
+            <div class="site__sectionhead">
+                <h2 class="site__sectionhead--background">education.js</h2>
             </div>
-            <h3 class="site__trade">© 2018 NakDev, Justin Schlump</h3>
-        </footer>
-    </div>
+            <div class="site__class">
+                <h3 class="site__who site__color--grey">/*Lake Washington Technical College*/<span class="site__who--date">September
+                        2011-2016</span></h3>
+                <p class="site__description site__color--green">`Took classes such as Technical Writing, C++,
+                    JavaScript and
+                    programming fundamentals along with multiple web development courses. Created projects
+                    demonstrating knowledge of HTML, CSS, JavaScript, version control and API
+                    handling.`</p>
+            </div>
+            <div class="site__class">
+                <h3 class="site__who site__color--grey">/*Udemy Online Courses*/<span class="site__who--date">September
+                        2017-2018</span></h3>
+                <p class="site__description site__color--green">`Courses taken:<br>-The Complete JavaScript Course
+                    2018<br>-Build
+                    Responsive Real World Websites with HTML5 and CSS3<br>-The Web Developer Bootcamp`</p>
+                <span class="site__caret">|</span>
+            </div>
+        </section>
+
+        <section class="site__contact draggable">
+            <div class="site__sectionhead">
+                <h2 class="site__sectionhead--background">contact.html</h2>
+            </div>
+            <span class="site__caret">&nbsp;█</span>
+            <form class="site__form" action="email-handler.php" method="post">
+                <h2 class="site__skillset site__color--grey">// GET_AT_ME</h3>
+                    <fieldset class="site__inputset">
+                        <input class="site__input" name="name" placeholder="_NAME" type="text" tabindex="1" required
+                            autofocus>
+                        <input class="site__input" name="email" placeholder="_EMAIL" type="email" tabindex="2" required>
+                        <input class="site__input" name="phone" placeholder="_PHONE" type="tel" tabindex="3" required>
+                        <textarea class="site__textarea" name="message" placeholder="LEAVE_YOUR_MESSAGE_HERE..." type="text"
+                            tabindex="4"></textarea>
+                        <button class="site__submit" type="submit" data-submit="...SENDING">SUBMIT</button>
+                    </fieldset>
+            </form>
+        </section>
+    </main>
+
+    <!--FOOTER-------------------------------------------------------------->
+    <footer class="site__badges">
+        <a href="https://www.linkedin.com/in/justinschlump/" target="_blank"><img class="site__badge" src="img/linkedin-square-white.png"
+                alt="linked in link"></a>
+        <a href="https://github.com/nak1411" target="_blank"><img class="site__badge" src="img/github-square-white.png"
+                alt="github link"></a>
+    </footer>
+    <h3 class="site__trade">© 2018 NakDev, Justin Schlump</h3>
 </body>
 
 </html>

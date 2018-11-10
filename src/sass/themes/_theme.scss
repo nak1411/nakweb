@@ -1,6 +1,9 @@
 body {
   margin: 0 ;
+  padding: 0;
   font-family: $fontPrimary;
   color: color(primaryFont);
-  background: linear-gradient(180deg, rgb(40, 40, 40) 10%, color(primaryBackground) 100%);
+  background: linear-gradient(180deg, rgb(40, 40, 40), color(primaryBackground) 50%);
+  width: 100%;
+  height: 100%;
 }
