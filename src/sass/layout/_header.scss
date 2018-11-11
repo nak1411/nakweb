@@ -6,6 +6,20 @@
   justify-content: center;
 }
 
+@include medium {
+
+  &__intro {
+    font-size: .7em;
+  }
+}
+
+@include small {
+
+  &__intro {
+    font-size: .5em;
+  }
+}
+
 &__intro {
   align-self: center;
 }

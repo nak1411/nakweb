@@ -8,6 +8,14 @@
   background-color: #000;
 }
 
+@include medium {
+  &__projects {
+    position: static;
+    margin: 1em;
+    width: 25em;
+  }
+}
+
 &__app {
   position: relative;
   width: 100%;

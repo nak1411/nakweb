@@ -8,6 +8,16 @@
   background-color: #000;
 }
 
+@include medium {
+  &__skills {
+    position: static;
+    float: none;
+    clear: none;
+    margin: 1em;
+    width: 25em;
+  }
+}
+
 &__skillset {
   margin: .5em;
   list-style: none;

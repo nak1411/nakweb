@@ -8,6 +8,16 @@
   font-family: $fontSecondary;
 }
 
+@include medium {
+  &__education {
+    position: static;
+    float: none;
+    clear: none;
+    margin: 1em;
+    width: 25em;
+  }
+}
+
 &__class {
   margin: 1em;
   padding-bottom: 1em;

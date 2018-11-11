@@ -7,6 +7,15 @@
   background-color: #000;
 }
 
+@include medium {
+  &__contact {
+    position: static;
+    float: none;
+    margin: 1em;
+    width: 25em;
+  }
+}
+
 &__form {
   margin: 2em;
   text-align: left;
