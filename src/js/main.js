@@ -47,6 +47,7 @@ let APP = (function () {
     // Enable draggable elements
     $(".draggable").draggable({
       snap: true,
+      snapTolerance: 5,
       containment: "document"
     });
 

@@ -24,6 +24,7 @@ section:hover &__caret {
   line-height: 1.5em;
   text-align: center;
   background-color: rgb(50, 50, 50);
+  cursor: move;
 }
 
 &__sectionhead--minimize {
