@@ -2,6 +2,9 @@
  * © 2018 Justin Schlump
  * This code is licensed under MIT license (see LICENSE.txt for details)
  * 
+ * NakDev is a Front-End Developer web portfolio for Justin Schlump.  Site includes
+ * various projects section, skill section, education section, and contact section.
+ * 
  */
 
 import '../sass/main.scss';
@@ -94,7 +97,6 @@ let APP = (function () {
     for (const particle of particles) {
       particle.update();
     }
-
   }
 
   /**
