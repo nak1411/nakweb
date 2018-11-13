@@ -4,17 +4,22 @@
   float: right;
   outline: 2px rgb(110, 110, 110) solid;
   box-shadow: 15px 15px 10px 2px rgba(0, 0, 0, 0.62);
-  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.6);
   font-family: $fontSecondary;
-}
 
-@include medium {
-  &__education {
-    position: static;
+  @include large {
     float: none;
     clear: none;
-    margin: 1em;
+    margin: 2em auto;
     width: 25em;
+  }
+
+  @include medium {
+    width: 20em;
+  }
+
+  @include small {
+    width: 15em;
   }
 }
 
@@ -27,6 +32,10 @@
   align-content: center;
   justify-content: center;
   border-bottom: 2px rgb(110, 110, 110) dashed;
+
+  @include medium {
+    margin: .3em;
+  }
 }
 
 &__description {

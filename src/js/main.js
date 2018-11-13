@@ -16,7 +16,6 @@ let APP = (function () {
   let canvas;
   let context;
   let particles = [];
-  let maxP;
 
   let fps = 30;
   let now;
@@ -33,37 +32,14 @@ let APP = (function () {
     context = canvas.getContext('2d');
     canvas.width = document.body.clientWidth;
     canvas.height = document.body.clientHeight;
-    let screenWidth = canvas.width;
-    let screenHeight = canvas.height;
 
-    if (screenWidth <= 800) {
-      maxP = 1000;
+    if (document.body.clientWidth >= 800) {
+      initDraggable(true);
+      initParticles(5000);
     } else {
-      maxP = 5000;
+      initDraggable(false);
+      initParticles(1000);
     }
-
-    // Fill particle array
-    for (let i = 0; i < maxP; i++) {
-      particles.push(new Particle(context, screenWidth, screenHeight));
-    }
-
-    // Enable draggable elements
-    $(".draggable").draggable({
-      snap: true,
-      snapTolerance: 5,
-      containment: "document"
-    });
-
-    // Keep focused draggable elements on top and in correct z-order
-    let prev = false;
-    $(".draggable").click(function () {
-      $(this).css("position", "relative");
-      if (prev) {
-        prev.style.zIndex = 1;
-      }
-      this.style.zIndex = 1000;
-      prev = this;
-    });
 
     // Start loop
     if (running) {
@@ -74,6 +50,57 @@ let APP = (function () {
     }
   }
 
+  $(window).resize(() => {
+    canvas.width = document.body.clientWidth;
+    canvas.height = document.body.clientHeight;
+
+    if (document.body.clientWidth <= 800) {
+      initDraggable(false);
+      particles = [];
+      initParticles(1000);
+
+    } else {
+      initDraggable(true);
+      particles = [];
+      initParticles(5000);
+    }
+  })
+
+  const initParticles = (maxP) => {
+    // Fill particle array
+    for (let i = 0; i < maxP; i++) {
+      particles.push(new Particle(context, canvas.width, canvas.height));
+    }
+  }
+
+  const initDraggable = (isDraggable) => {
+
+    if (isDraggable) {
+      // Enable draggable elements
+      $(".draggable").draggable({
+        disabled: false,
+        snap: true,
+        snapTolerance: 5,
+        containment: "document"
+      });
+
+      // Keep focused draggable elements on top and in correct z-order
+      let prev = false;
+      $(".draggable").on("click", function () {
+        $(this).css("position", "relative");
+        if (prev) {
+          prev.style.zIndex = 1;
+        }
+        this.style.zIndex = 1000;
+        prev = this;
+      });
+
+    } else {
+      $(".draggable").draggable({
+        disabled: true
+      });
+    }
+  }
   /**
    * Main Loop
    */
@@ -117,12 +144,12 @@ let APP = (function () {
    * Particle class aka stars
    */
   class Particle {
-    constructor(context, screenWidth, screenHeight) {
+    constructor(context, canvasWidth, canvasHeight) {
       this.context = context;
-      this.screenWidth = screenWidth;
-      this.screenHeight = screenHeight;
-      this.x = Math.floor(Math.random() * screenWidth);
-      this.y = Math.floor(Math.random() * screenHeight);
+      this.canvasWidth = canvasWidth;
+      this.canvasHeight = canvasHeight;
+      this.x = Math.floor(Math.random() * canvasWidth);
+      this.y = Math.floor(Math.random() * canvasHeight);
       this.vx = Math.random() * (1 - (-1)) + (-1);
       this.vy = Math.random() * (1 - (-1)) + (-1);
       this.pSpeed = .01;
@@ -140,11 +167,11 @@ let APP = (function () {
     }
 
     update() {
-      if (this.x >= this.screenWidth || this.x <= 0) {
+      if (this.x >= this.canvasWidth || this.x <= 0) {
         this.vx = -this.vx;
       }
 
-      if (this.y >= this.screenHeight || this.y <= 0) {
+      if (this.y >= this.canvasHeight || this.y <= 0) {
         this.vy = -this.vy;
       }
 

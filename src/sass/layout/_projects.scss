@@ -2,17 +2,27 @@
   position: relative;
   left: 50%;
   transform: translateX(-50%);
-  width: 80em;
+  width: 65em;
   outline: 2px rgb(110, 110, 110) solid;
   box-shadow: 15px 15px 10px 2px rgba(0, 0, 0, 0.62);
-  background-color: #000;
-}
+  background-color: rgba(0, 0, 0, 0.6);
 
-@include medium {
-  &__projects {
-    position: static;
-    margin: 1em;
+  @include huge {
+    margin: auto 0;
+    width: 50em;
+  }
+
+  @include large {
+    margin: auto 0;
     width: 25em;
+  }
+
+  @include medium {
+    width: 20em;
+  }
+
+  @include small {
+    width: 15em;
   }
 }
 
@@ -23,6 +33,18 @@
   transition: .5s ease;
   opacity: 1;
   cursor: pointer;
+
+  @include medium {
+    margin: auto;
+    width: 16em;
+    height: 16em;
+  }
+
+  @include small {
+    margin: auto;
+    width: 12em;
+    height: 12em;
+  }
 }
 
 &__app:hover &__appimg {
@@ -46,6 +68,10 @@
   height: 100%;
   opacity: 0;
   font-family: $fontSecondary;
+
+  @include medium {
+    display: none;
+  }
 }
 
 &__overlay:hover {

@@ -1,18 +1,25 @@
 &__contact {
   margin: .5em;
+  padding-bottom: .5em;
   width: 35em;
   float: left;
   outline: 2px rgb(110, 110, 110) solid;
   box-shadow: 15px 15px 10px 2px rgba(0, 0, 0, 0.62);
-  background-color: #000;
-}
+  background-color: rgba(0, 0, 0, 0.6);
 
-@include medium {
-  &__contact {
-    position: static;
+  @include large {
     float: none;
-    margin: 1em;
+    clear: none;
+    margin: 2em auto;
     width: 25em;
+  }
+
+  @include medium {
+    width: 20em;
+  }
+
+  @include small {
+    width: 15em;
   }
 }
 
@@ -21,6 +28,16 @@
   text-align: left;
   font-family: $fontSecondary;
   font-size: 1.3em;
+
+  @include medium {
+    margin: 1em;
+    font-size: 1em;
+  }
+
+  @include small {
+    margin: .8;
+    font-size: .8em;
+  }
 }
 
 &__inputset {
@@ -28,7 +45,6 @@
   padding: 1em;
   border: 2px rgb(110, 110, 110) dashed;
   text-align: center;
-
 }
 
 &__input {
@@ -59,6 +75,18 @@
   border: 1px dotted;
   background-color: rgb(110, 110, 110);
   font-size: 1.5em;
+
+  @include large {
+    font-size: 1em;
+  }
+
+  @include medium {
+    font-size: 1.3em;
+  }
+
+  @include small {
+    font-size: 1.2em;
+  }
 }
 
 &__textarea::placeholder {
@@ -78,6 +106,17 @@
   border: 1px dotted;
   border-radius: 1em;
   cursor: pointer;
+
+  @include medium {
+    width: 10em;
+    height: 3em;
+  }
+
+  @include small {
+    width: 10em;
+    height: 2em;
+    border-radius: .5em;
+  }
 }
 
 &__submit:active {
