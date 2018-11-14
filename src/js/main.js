@@ -50,6 +50,9 @@ let APP = (function () {
     }
   }
 
+  /**
+   * Listen for window resizing
+   */
   $(window).resize(() => {
     canvas.width = document.body.clientWidth;
     canvas.height = document.body.clientHeight;
@@ -66,6 +69,33 @@ let APP = (function () {
     }
   })
 
+  /**
+   * Listen for submit click and handle
+   * email submissions
+   */
+  $(".site__submit").click(function (e) {
+    e.preventDefault();
+
+    let data = {
+      name: $("input[name='name']").val(),
+      email: $("input[name='email']").val(),
+      phone: $("input[name='phone']").val(),
+      message: $("textarea[name='message']").val()
+    };
+
+    $.ajax({
+      method: "POST",
+      url: "email.php",
+      data: data,
+      success: function () {
+        console.log("Email Sent");
+      }
+    })
+  });
+
+  /**
+   * Initialize particle array
+   */
   const initParticles = (maxP) => {
     // Fill particle array
     for (let i = 0; i < maxP; i++) {
@@ -73,6 +103,10 @@ let APP = (function () {
     }
   }
 
+  /**
+   * Setup draggable elements and check window size to
+   * determine if elements are too small to drag
+   */
   const initDraggable = (isDraggable) => {
 
     if (isDraggable) {
@@ -86,7 +120,7 @@ let APP = (function () {
 
       // Keep focused draggable elements on top and in correct z-order
       let prev = false;
-      $(".draggable").on("click", function () {
+      $(".draggable").click(function () {
         $(this).css("position", "relative");
         if (prev) {
           prev.style.zIndex = 1;
@@ -155,9 +189,9 @@ let APP = (function () {
       this.pSpeed = .01;
       this.width = 2;
       this.height = 2;
-      this.r = Math.random() * 50;
-      this.g = Math.random() * 50;
-      this.b = Math.random() * 150;
+      this.r = Math.random() * 100;
+      this.g = Math.random() * 200;
+      this.b = Math.random() * 250;
       this.alpha = Math.random() * (1 - (.2)) + (.2);
     }
 
