@@ -7,7 +7,7 @@
  * 
  */
 
-import '../sass/main.scss';
+import '../sass/pages/home/main.scss';
 require('jquery');
 require('jquery-ui-bundle');
 
